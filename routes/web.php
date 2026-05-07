@@ -30,3 +30,21 @@ Route::get('/mailin-monti', function () {
 
 	return view('mailin-monti', compact('professional', 'services'));
 });
+
+Route::get('/debug-session', function () {
+    return [
+        'auth' => auth()->check(),
+        'user' => auth()->user()?->email,
+        'session_id' => session()->getId(),
+        'secure' => request()->isSecure(),
+        'cookies' => request()->cookies->all(),
+    ];
+});
+
+Route::get('/test-auth', function () {
+    return [
+        'auth' => auth()->check(),
+        'user' => auth()->user(),
+        'session' => session()->all(),
+    ];
+})->middleware('web');
