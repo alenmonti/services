@@ -11,6 +11,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
+use Filament\Actions\DeleteAction;
 use Filament\Resources\Resource;
 use Filament\Support\Icons\Heroicon;
 use Filament\Schemas\Schema;
@@ -46,6 +47,7 @@ class ServiceResource extends Resource
                 FileUpload::make('image')
                     ->image()
                     ->disk('public')
+                    ->directory('services')
                     ->label('Imagen'),
 
                 Toggle::make('visible')
@@ -58,7 +60,9 @@ class ServiceResource extends Resource
     {
         return $table
             ->columns([
-                ImageColumn::make('image')->label('Imagen'),
+                ImageColumn::make('image')
+                    ->disk('public')
+                    ->label('Imagen'),
                 TextColumn::make('title')->label('Título')->searchable(),
                 TextColumn::make('price')->label('Precio'),
                 BooleanColumn::make('visible')->label('Visible'),
@@ -66,6 +70,7 @@ class ServiceResource extends Resource
             ->filters([])
             ->actions([
                 EditAction::make(),
+                DeleteAction::make(),
             ])
             ->bulkActions([
                 DeleteBulkAction::make(),

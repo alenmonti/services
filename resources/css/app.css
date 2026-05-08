@@ -16,9 +16,17 @@
 
 @theme {
     --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
+        'Inter', 'Instrument Sans', ui-sans-serif, system-ui, sans-serif,
         'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
         'Noto Color Emoji';
+    --font-serif:
+        'Playfair Display', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+
+    --color-primary: #006064; /* deep teal */
+    --color-primary-hover: #004d40;
+    --color-bg-light: #faf9f7; /* off-white/beige background */
+    --color-accent-pink: #ffebee;
+    --color-accent-blue: #e1f5fe;
 }
 
 @variant dark (&:where(.dark, .dark *));
