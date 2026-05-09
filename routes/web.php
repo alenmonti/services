@@ -22,13 +22,15 @@ Route::get('/mailin-monti', function () {
 	$professional = Professional::where('slug', 'mailin-monti')->first();
 
 	if (! $professional) {
-		$services = collect();
-		return view('mailin-monti', compact('professional', 'services'));
+		$groups = collect();
+		return view('mailin-monti', compact('professional', 'groups'));
 	}
 
-	$services = $professional->services()->where('visible', true)->get();
+	$groups = $professional->serviceGroups()->with(['services' => function ($query) {
+        $query->where('visible', true);
+    }])->get();
 
-	return view('mailin-monti', compact('professional', 'services'));
+	return view('mailin-monti', compact('professional', 'groups'));
 });
 
 Route::get('/debug-session', function () {

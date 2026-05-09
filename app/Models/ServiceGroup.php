@@ -5,23 +5,15 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class ServiceGroup extends Model
 {
     use HasFactory;
 
     protected $fillable = [
         'professional_id',
-        'service_group_id',
         'title',
         'description',
-        'price',
         'image',
-        'visible',
-    ];
-
-    protected $casts = [
-        'visible' => 'boolean',
-        'price' => 'decimal:2',
     ];
 
     public function professional()
@@ -29,8 +21,8 @@ class Service extends Model
         return $this->belongsTo(Professional::class);
     }
 
-    public function group()
+    public function services()
     {
-        return $this->belongsTo(ServiceGroup::class, 'service_group_id');
+        return $this->hasMany(Service::class);
     }
 }

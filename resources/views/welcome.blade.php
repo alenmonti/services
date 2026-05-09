@@ -22,14 +22,10 @@
 
     <!-- Header -->
     <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
-        <div class="flex items-center gap-2">
-            <svg class="w-8 h-8 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                <path d="M12 8v4"/>
-                <path d="M10 10h4"/>
-            </svg>
-            <span class="font-serif text-xl font-medium text-stone-900">Consultorio Monti</span>
-        </div>
+        <a href="#" class="block w-40 md:w-52 shrink-0">
+            <!-- Logo -->
+            <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-36 h-auto object-contain invert">
+        </a>
         <nav class="hidden md:flex gap-8 text-sm font-medium text-stone-500">
             <a href="#" class="text-brand border-b-2 border-brand pb-1">Inicio</a>
             <a href="#especialistas" class="hover:text-brand transition-colors pb-1 border-b-2 border-transparent">Profesionales</a>
@@ -66,7 +62,7 @@
                 </div>
             </div>
             <div class="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <img src="/storage/images/clinic1.webp" alt="Recepción Consultorio" class="absolute inset-0 w-full h-full object-cover">
+                <img src="{{ web_image('welcome.hero') }}" alt="Recepción Consultorio" class="absolute inset-0 w-full h-full object-cover">
             </div>
         </section>
 
@@ -78,7 +74,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 <!-- Maga Card -->
                 <div class="bg-white rounded-3xl p-8 flex flex-col sm:flex-row gap-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-stone-100 items-start">
-                    <img src="/storage/images/maga.avif" alt="Magalí Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100">
+                    <img src="{{ web_image('welcome.maga_profile') }}" alt="Magalí Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100">
                     <div class="flex flex-col h-full">
                         <h3 class="font-serif text-2xl text-brand mb-1">Magalí Monti</h3>
                         <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-3">Psicoterapeuta</p>
@@ -90,12 +86,12 @@
                         </a>
                     </div>
                 </div>
-
+                
                 <!-- Mai Card -->
                 <div class="bg-white rounded-3xl p-8 flex flex-col sm:flex-row gap-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-stone-100 items-start">
-                    <img src="/storage/images/mai.jpeg" alt="Mailén Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100">
+                    <img src="{{ web_image('welcome.mai_profile') }}" alt="Mailín Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100">
                     <div class="flex flex-col h-full">
-                        <h3 class="font-serif text-2xl text-brand mb-1">Mailén Monti</h3>
+                        <h3 class="font-serif text-2xl text-brand mb-1">Mailín Monti</h3>
                         <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-3">Dermatóloga</p>
                         <p class="text-xs sm:text-sm text-stone-500 font-light leading-relaxed mb-6 flex-grow">
                             Cuidado integral de tu piel, cabello y uñas. Diagnóstico preciso y tratamientos de vanguardia enfocados en resaltar tu belleza natural y cuidar tu salud dermatológica.
@@ -130,8 +126,8 @@
                 </div>
             </div>
             <div class="w-full md:w-1/2 flex flex-col sm:flex-row h-[500px] md:h-auto">
-                <img src="/storage/images/clinic2.webp" alt="Consultorio Psicoterapia" class="w-full sm:w-1/2 h-1/2 sm:h-full object-cover">
-                <img src="/storage/images/clinic3.webp" alt="Consultorio Dermatología" class="w-full sm:w-1/2 h-1/2 sm:h-full object-cover">
+                <img src="{{ web_image('welcome.clinic_psicoterapia') }}" alt="Consultorio Psicoterapia" class="w-full sm:w-1/2 h-1/2 sm:h-full object-cover">
+                <img src="{{ web_image('welcome.clinic_dermatologia') }}" alt="Consultorio Dermatología" class="w-full sm:w-1/2 h-1/2 sm:h-full object-cover">
             </div>
         </section>
 
@@ -144,12 +140,7 @@
             <!-- Brand & Bio -->
             <div class="col-span-1 md:col-span-2">
                 <div class="flex items-center gap-2 mb-6">
-                    <svg class="w-6 h-6 text-brand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                        <path d="M12 8v4"/>
-                        <path d="M10 10h4"/>
-                    </svg>
-                    <span class="font-serif text-xl font-medium text-stone-900">Consultorio Monti</span>
+                    <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-40 h-auto object-contain invert">
                 </div>
                 <p class="text-sm text-stone-500 font-light leading-relaxed mb-6 max-w-sm">
                     Cuidamos tu salud integral con profesionalismo y calidez humana. Psicología y Dermatología en un solo lugar.

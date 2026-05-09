@@ -31,7 +31,7 @@ $serviceColors = [
     <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50" x-data="{ mobileMenuOpen: false }">
         <a href="#" class="block w-40 md:w-56 shrink-0">
             <!-- Logo -->
-            <img src="{{ asset('storage/images/logo.avif') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-full h-auto object-contain">
+            <img src="{{ web_image('magali.logo') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-full h-auto object-contain">
         </a>
         
         <!-- Desktop Nav -->
@@ -81,7 +81,7 @@ $serviceColors = [
             </div>
             <div class="order-1 md:order-2 relative flex justify-center md:justify-end">
                 <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-xl aspect-[4/5] object-cover bg-gray-200">
-                    <img src="{{ asset('storage/images/magali-conferencia.avif') }}" alt="Magali Monti" class="w-full h-full object-cover object-top">
+                    <img src="{{ web_image('magali.hero') }}" alt="Magali Monti" class="w-full h-full object-cover object-top">
                 </div>
                 <!-- Floating Badge -->
                 <div class="absolute -bottom-6 md:-bottom-8 left-4 md:-left-8 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-sm max-w-[240px]">
@@ -244,10 +244,10 @@ $serviceColors = [
         <section id="sobre-mi" class="py-16 md:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative w-full aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
-                    <img src="{{ asset('storage/images/magali-conferencia-2.avif') }}" alt="Conoceme - Magali Monti" class="w-full h-full object-cover object-left">
+                    <img src="{{ web_image('magali.profile') }}" alt="Conoceme - Magali Monti" class="w-full h-full object-cover object-left">
                     <!-- Decoración Rompecabezas -->
                     <div class="absolute -bottom-8 -right-8 w-40 h-40 opacity-90 hidden md:block">
-                        <img src="{{ asset('storage/images/piezas-rompecabezas.avif') }}" alt="Rompecabezas" class="w-full h-full object-contain">
+                        <img src="{{ web_image('magali.puzzle') }}" alt="Rompecabezas" class="w-full h-full object-contain">
                     </div>
                 </div>
                 
@@ -405,7 +405,7 @@ $serviceColors = [
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-2">
-                    <img src="{{ asset('storage/images/logo.avif') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-48 mb-6">
+                    <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-48 h-auto object-contain mb-8 invert">
                     <p class="text-gray-500 text-sm max-w-sm leading-relaxed mb-8">
                         Psicología con un enfoque humano y profesional. Un espacio para encontrarte con uno mismo.
                     </p>

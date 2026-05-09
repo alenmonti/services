@@ -9,6 +9,7 @@ use Filament\Forms\Components\Hidden;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Select;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\DeleteAction;
@@ -36,6 +37,18 @@ class ServiceResource extends Resource
                 TextInput::make('title')
                     ->required()
                     ->label('Título'),
+
+                Select::make('service_group_id')
+                    ->relationship(
+                        name: 'group',
+                        titleAttribute: 'title',
+                        modifyQueryUsing: fn (\Illuminate\Database\Eloquent\Builder $query) => 
+                            auth()->check() && auth()->user()->professional_id 
+                                ? $query->where('professional_id', auth()->user()->professional_id)
+                                : $query
+                    )
+                    ->label('Grupo de Servicio')
+                    ->nullable(),
 
                 Textarea::make('description')
                     ->label('Descripción'),

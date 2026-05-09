@@ -20,4 +20,9 @@ class Professional extends Model
     {
         return $this->hasMany(Service::class);
     }
+
+    public function serviceGroups()
+    {
+        return $this->hasMany(ServiceGroup::class);
+    }
 }
