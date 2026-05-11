@@ -14,7 +14,7 @@ return [
         'logo-transparent' => 'web/welcome/logo-transparent.png',
     ],
     'magali' => [
-        'logo' => 'web/magali-monti/logo.avif',
+        'logo' => 'web/magali-monti/logo.png',
         'hero' => 'web/magali-monti/magali-conferencia.avif',
         'profile' => 'web/magali-monti/magali-conferencia-2.avif',
         'puzzle' => 'web/magali-monti/piezas-rompecabezas.avif',

@@ -178,7 +178,69 @@
                 </ul>
             </div>
         </div>
-        
+
+        <!-- Encuéntranos Section (copied from Mailín) -->
+        <section id="contacto" class="py-20 md:py-32 bg-[#e8ebe6] relative">
+            <div class="max-w-6xl mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#405b6a]/10">
+                    <!-- Info Contacto -->
+                    <div class="bg-white p-12 md:p-20 flex flex-col justify-center">
+                        <div class="flex items-center gap-3 mb-6">
+                            <span class="h-[1px] w-8 bg-[#405b6a]"></span>
+                            <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
+                        </div>
+                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de San Miguel</h2>
+
+                        <div class="space-y-10">
+                            <div class="flex items-start gap-6 group">
+                                <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
+                                    <x-heroicon-o-map-pin class="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Dirección</h4>
+                                    <p class="text-gray-500 text-base leading-relaxed">Conesa 849, 4f<br>Muñiz, Buenos Aires</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-6 group">
+                                <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
+                                    <x-heroicon-o-envelope class="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
+                                    <a href="mailto:consultoriomonti@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">consultoriomonti@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-6 group">
+                                <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
+                                    <x-heroicon-o-phone class="w-6 h-6" />
+                                </div>
+                                <div>
+                                    <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
+                                    <a href="tel:+541130968455" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 5874 2412</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-16">
+                            <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
+                                Agendar Turno
+                                <x-heroicon-o-arrow-right class="w-4 h-4" />
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Mapa -->
+                    <div class="bg-[#dcdbd7] min-h-[500px] flex items-center justify-center relative group">
+                        <div class="w-full h-full">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26288.963762153122!2d-58.69404160759703!3d-34.55050504753984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbddd3ef9c665%3A0x5f82c414c0cba5f7!2sConsultorio%20M%C3%A9dico%20y%20Terap%C3%A9utico%20Monti!5e0!3m2!1ses!2sar!4v1778541915531!5m2!1ses!2sar" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="max-w-6xl mx-auto px-6 text-center text-stone-400 text-xs font-light">
             &copy; {{ date('Y') }} Consultorio Monti. Todos los derechos reservados.
         </div>

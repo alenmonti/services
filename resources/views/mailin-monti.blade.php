@@ -276,12 +276,8 @@
     
                     <!-- Mapa Placeholder -->
                     <div class="bg-[#dcdbd7] min-h-[500px] flex items-center justify-center relative group">
-                        <div class="absolute inset-0 bg-[#405b6a]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
-                        <div class="text-[#405b6a]/20 transition-transform duration-700 group-hover:scale-125">
-                            <x-heroicon-o-map class="w-32 h-32" />
-                        </div>
-                        <div class="absolute bottom-10 left-10 right-10 bg-white/80 backdrop-blur-md p-6 rounded-2xl translate-y-20 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 shadow-xl">
-                            <p class="text-xs font-bold text-[#405b6a] uppercase tracking-widest text-center">Estamos aquí para cuidarte</p>
+                        <div class="w-full h-full">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26288.963762153122!2d-58.69404160759703!3d-34.55050504753984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbddd3ef9c665%3A0x5f82c414c0cba5f7!2sConsultorio%20M%C3%A9dico%20y%20Terap%C3%A9utico%20Monti!5e0!3m2!1ses!2sar!4v1778541915531!5m2!1ses!2sar" frameborder="0" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-full h-full"></iframe>
                         </div>
                     </div>
                 </div>
