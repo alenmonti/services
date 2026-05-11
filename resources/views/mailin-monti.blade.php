@@ -295,7 +295,9 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid md:grid-cols-4 gap-16 mb-20">
                 <div class="md:col-span-2">
-                    <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-48 h-auto object-contain mb-8 invert">
+                    <a href="/" class="inline-block w-48 h-auto object-contain mb-8 hover:opacity-80 transition-opacity">
+                        <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain invert">
+                    </a>
                     <p class="text-white/60 text-base max-w-sm leading-relaxed mb-8">
                         Excelencia médica y calidez humana al servicio de tu piel. Llevamos la dermatología a un nuevo estándar de cuidado personalizado.
                     </p>

@@ -74,34 +74,34 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
                 <!-- Maga Card -->
-                <div class="bg-white rounded-3xl p-8 flex flex-col sm:flex-row gap-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-stone-100 items-start">
+                <a href="/magali-monti" class="group bg-white rounded-3xl p-8 flex flex-col sm:flex-row gap-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-stone-100 items-start hover:shadow-[0_12px_32px_-10px_rgba(0,0,0,0.15)] transition-all duration-300">
                     <img src="{{ web_image('welcome.maga_profile') }}" alt="Magalí Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100">
                     <div class="flex flex-col h-full">
-                        <h3 class="font-serif text-2xl text-brand mb-1">Magalí Monti</h3>
+                        <h3 class="font-serif text-2xl text-brand mb-1 group-hover:text-brand-dark transition-colors">Magalí Monti</h3>
                         <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-3">Psicoterapeuta</p>
                         <p class="text-xs sm:text-sm text-stone-500 font-light leading-relaxed mb-6 flex-grow">
                             Especializada en acompañar procesos terapéuticos desde la empatía y la escucha activa. Un espacio seguro para trabajar en tu salud mental y desarrollo personal.
                         </p>
-                        <a href="/magali-monti" class="text-xs font-semibold text-brand hover:text-brand-dark inline-flex items-center gap-1 transition-colors uppercase tracking-wider mt-auto">
-                            Ver perfil y servicios <x-heroicon-o-arrow-right class="w-4 h-4" />
-                        </a>
+                        <div class="text-xs font-semibold text-brand group-hover:text-brand-dark inline-flex items-center gap-1 transition-colors uppercase tracking-wider mt-auto">
+                            Ver perfil y servicios <x-heroicon-o-arrow-right class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Mai Card -->
-                <div class="bg-white rounded-3xl p-8 flex flex-col sm:flex-row gap-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-stone-100 items-start">
+                <a href="/mailin-monti" class="group bg-white rounded-3xl p-8 flex flex-col sm:flex-row gap-8 shadow-[0_4px_20px_-10px_rgba(0,0,0,0.05)] border border-stone-100 items-start hover:shadow-[0_12px_32px_-10px_rgba(0,0,0,0.15)] transition-all duration-300">
                     <img src="{{ web_image('welcome.mai_profile') }}" alt="Mailín Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100">
                     <div class="flex flex-col h-full">
-                        <h3 class="font-serif text-2xl text-brand mb-1">Mailín Monti</h3>
+                        <h3 class="font-serif text-2xl text-brand mb-1 group-hover:text-brand-dark transition-colors">Mailín Monti</h3>
                         <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-3">Dermatóloga</p>
                         <p class="text-xs sm:text-sm text-stone-500 font-light leading-relaxed mb-6 flex-grow">
                             Cuidado integral de tu piel, cabello y uñas. Diagnóstico preciso y tratamientos de vanguardia enfocados en resaltar tu belleza natural y cuidar tu salud dermatológica.
                         </p>
-                        <a href="/mailin-monti" class="text-xs font-semibold text-brand hover:text-brand-dark inline-flex items-center gap-1 transition-colors uppercase tracking-wider mt-auto">
-                            Ver perfil y servicios <x-heroicon-o-arrow-right class="w-4 h-4" />
-                        </a>
+                        <div class="text-xs font-semibold text-brand group-hover:text-brand-dark inline-flex items-center gap-1 transition-colors uppercase tracking-wider mt-auto">
+                            Ver perfil y servicios <x-heroicon-o-arrow-right class="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
