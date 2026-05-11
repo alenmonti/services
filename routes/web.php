@@ -1,33 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Models\Professional;
+use App\Http\Controllers\ProfessionalController;
 
 Route::view('/', 'welcome')->name('home');
 
-Route::get('/magali-monti', function () {
-	$professional = Professional::where('slug', 'magali-monti')->first();
-
-	if (! $professional) {
-		$services = collect();
-		return view('magali-monti', compact('professional', 'services'));
-	}
-
-	$services = $professional->services()->where('visible', true)->get();
-	return view('magali-monti', compact('professional', 'services'));
-});
-
-Route::get('/mailin-monti', function () {
-	$professional = Professional::where('slug', 'mailin-monti')->first();
-
-	if (! $professional) {
-		$groups = collect();
-		return view('mailin-monti', compact('professional', 'groups'));
-	}
-
-	$groups = $professional->serviceGroups()->with(['services' => function ($query) {
-        $query->where('visible', true);
-    }])->get();
-
-	return view('mailin-monti', compact('professional', 'groups'));
-});
+Route::get('/magali-monti', [ProfessionalController::class, 'showMagaliMonti']);
+Route::get('/mailin-monti', [ProfessionalController::class, 'showMailinMonti']);
