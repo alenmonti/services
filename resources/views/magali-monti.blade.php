@@ -18,6 +18,7 @@ $serviceColors = [
     <title>Lic. Magali Monti - Psicoterapeuta</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="{{ web_image('welcome.logo-ico') }}" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
@@ -405,7 +406,7 @@ $serviceColors = [
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
                 <div class="md:col-span-2">
-                    <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-48 h-auto object-contain mb-8 invert">
+                    <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-48 h-auto object-contain mb-8 invert">
                     <p class="text-gray-500 text-sm max-w-sm leading-relaxed mb-8">
                         Psicología con un enfoque humano y profesional. Un espacio para encontrarte con uno mismo.
                     </p>

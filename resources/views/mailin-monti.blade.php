@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Dra. Mailín Monti - Dermatología Clínica y Estética</title>
     <meta name="description" content="Especialista en Dermatología Clínica y Estética. Tratamientos personalizados de vanguardia en un ambiente de serenidad y profesionalismo.">
+    <link rel="icon" href="{{ web_image('welcome.logo-ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
@@ -80,7 +81,7 @@
                     </div>
 
                     <!-- Floating Badge (Cartelito) -->
-                    <div class="absolute -bottom-6 md:-bottom-10 left-4 md:-left-10 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl max-w-[260px] border border-gray-100/50 transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute -bottom-6 md:-bottom-10 left-4 md:-left-10 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
                         <div class="flex items-start gap-4">
                             <div class="p-3 bg-[#405b6a]/10 text-[#405b6a] rounded-xl shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -123,7 +124,7 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
                     @forelse($group->services as $service)
-                    <div class="group bg-white rounded-3xl overflow-hidden flex flex-col h-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(64,91,106,0.08)] transition-all duration-500 hover:-translate-y-2 border-t-4 border-transparent hover:border-[#405b6a]">
+                    <div class="group bg-white rounded-3xl overflow-hidden flex flex-col h-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(64,91,106,0.08)] transition-all duration-500 hover:-translate-y-2 ">
                         @if($service->image)
                         <div class="w-full h-64 relative overflow-hidden">
                             <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
@@ -146,10 +147,10 @@
                             </div>
                             <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-1 line-clamp-3">{{ $service->description }}</p>
                             
-                            <div class="flex items-center justify-between pt-6 border-t border-gray-50">
+                            <div class="flex items-center justify-between pt-4">
                                 @if($service->price)
                                 <div class="flex flex-col">
-                                    <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Inversión</span>
+                                    <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Valor</span>
                                     <p class="text-lg font-bold text-[#405b6a]">${{ number_format($service->price, 0, ',', '.') }}</p>
                                 </div>
                                 @endif
@@ -229,7 +230,7 @@
                     <div class="bg-white p-12 md:p-20 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-[1px] w-8 bg-[#405b6a]"></span>
-                            <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Cercanía</span>
+                            <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
                         </div>
                         <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de Palermo</h2>
                         
@@ -294,7 +295,7 @@
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid md:grid-cols-4 gap-16 mb-20">
                 <div class="md:col-span-2">
-                    <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-48 h-auto object-contain mb-8 invert">
+                    <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-48 h-auto object-contain mb-8 invert">
                     <p class="text-white/60 text-base max-w-sm leading-relaxed mb-8">
                         Excelencia médica y calidez humana al servicio de tu piel. Llevamos la dermatología a un nuevo estándar de cuidado personalizado.
                     </p>

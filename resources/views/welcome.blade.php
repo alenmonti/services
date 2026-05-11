@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Consultorio Monti</title>
+    <link rel="icon" href="{{ web_image('welcome.logo-ico') }}" type="image/x-icon">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +25,7 @@
     <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between">
         <a href="#" class="block w-40 md:w-52 shrink-0">
             <!-- Logo -->
-            <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-36 h-auto object-contain invert">
+            <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-36 h-auto object-contain invert">
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-medium text-stone-500">
             <a href="#" class="text-brand border-b-2 border-brand pb-1">Inicio</a>
@@ -140,7 +141,7 @@
             <!-- Brand & Bio -->
             <div class="col-span-1 md:col-span-2">
                 <div class="flex items-center gap-2 mb-6">
-                    <img src="{{ web_image('welcome.logo-sm-png') }}" alt="Consultorio Monti" class="w-40 h-auto object-contain invert">
+                    <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-40 h-auto object-contain invert">
                 </div>
                 <p class="text-sm text-stone-500 font-light leading-relaxed mb-6 max-w-sm">
                     Cuidamos tu salud integral con profesionalismo y calidez humana. Psicología y Dermatología en un solo lugar.
