@@ -44,7 +44,7 @@
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div class="flex flex-col items-start text-left">
                 <div class="flex items-center gap-2 text-brand text-xs font-semibold tracking-widest uppercase mb-6">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <x-heroicon-o-check-badge class="w-4 h-4" />
                     <span>Bienestar Integral</span>
                 </div>
                 <h1 class="font-serif text-5xl md:text-6xl text-stone-900 leading-[1.1] mb-6">
@@ -83,7 +83,7 @@
                             Especializada en acompañar procesos terapéuticos desde la empatía y la escucha activa. Un espacio seguro para trabajar en tu salud mental y desarrollo personal.
                         </p>
                         <a href="/magali-monti" class="text-xs font-semibold text-brand hover:text-brand-dark inline-flex items-center gap-1 transition-colors uppercase tracking-wider mt-auto">
-                            Ver perfil y servicios &rarr;
+                            Ver perfil y servicios <x-heroicon-o-arrow-right class="w-4 h-4" />
                         </a>
                     </div>
                 </div>
@@ -98,7 +98,7 @@
                             Cuidado integral de tu piel, cabello y uñas. Diagnóstico preciso y tratamientos de vanguardia enfocados en resaltar tu belleza natural y cuidar tu salud dermatológica.
                         </p>
                         <a href="/mailin-monti" class="text-xs font-semibold text-brand hover:text-brand-dark inline-flex items-center gap-1 transition-colors uppercase tracking-wider mt-auto">
-                            Ver perfil y servicios &rarr;
+                            Ver perfil y servicios <x-heroicon-o-arrow-right class="w-4 h-4" />
                         </a>
                     </div>
                 </div>
@@ -109,7 +109,7 @@
         <section id="espacio" class="bg-[#F0F1ED] rounded-[3rem] flex flex-col md:flex-row overflow-hidden border border-stone-100 shadow-sm">
             <div class="p-10 md:p-16 lg:p-20 flex flex-col justify-center w-full md:w-1/2">
                 <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 text-brand">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <x-heroicon-o-home class="w-6 h-6" />
                 </div>
                 <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Nuestro Espacio</h2>
                 <p class="font-serif italic text-stone-600 text-lg leading-relaxed mb-10">
@@ -148,13 +148,13 @@
                 </p>
                 <div class="flex gap-5 text-stone-400">
                     <a href="#" class="hover:text-[#A55F51] transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
+                        <x-heroicon-o-globe-alt class="w-5 h-5" />
                     </a>
                     <a href="#" class="hover:text-[#A55F51] transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <x-heroicon-o-phone class="w-5 h-5" />
                     </a>
                     <a href="#" class="hover:text-[#A55F51] transition-colors">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <x-heroicon-o-map-pin class="w-5 h-5" />
                     </a>
                 </div>
             </div>

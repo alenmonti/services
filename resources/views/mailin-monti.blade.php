@@ -232,7 +232,7 @@
                             <span class="h-[1px] w-8 bg-[#405b6a]"></span>
                             <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
                         </div>
-                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de Palermo</h2>
+                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de San Miguel</h2>
                         
                         <div class="space-y-10">
                             <div class="flex items-start gap-6 group">
@@ -241,7 +241,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Dirección</h4>
-                                    <p class="text-gray-500 text-base leading-relaxed">Guatemala 5612, piso 2<br>Palermo, CABA</p>
+                                    <p class="text-gray-500 text-base leading-relaxed">Conesa 849, 4f<br>Muñiz, Buenos Aires</p>
                                 </div>
                             </div>
     
@@ -251,7 +251,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
-                                    <a href="mailto:dramailinmonti@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">dramailinmonti@gmail.com</a>
+                                    <a href="mailto:consultoriodramonti@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">dramailinmonti@gmail.com</a>
                                 </div>
                             </div>
     
@@ -261,13 +261,13 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
-                                    <a href="tel:+541158742412" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 5874 2412</a>
+                                    <a href="tel:+541130968455" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 5874 2412</a>
                                 </div>
                             </div>
                         </div>
     
                         <div class="mt-16">
-                            <a href="https://wa.me/5491158742412" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
+                            <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
                                 Agendar Turno
                                 <x-heroicon-o-arrow-right class="w-4 h-4" />
                             </a>
