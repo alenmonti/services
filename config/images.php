@@ -7,6 +7,8 @@ return [
         'mai_profile' => 'web/welcome/mai.jpeg',
         'clinic_psicoterapia' => 'web/welcome/clinic2.webp',
         'clinic_dermatologia' => 'web/welcome/clinic3.webp',
+        'clinic_psicoterapia2' => 'web/welcome/clinic4.jpeg',
+        'clinic_dermatologia2' => 'web/welcome/clinic5.jpeg',
         'logo-bg' => 'web/welcome/logo-bg.jpg',
         'logo' => 'web/welcome/logo.jpg',
         'logo-sm' => 'web/welcome/logo-sm.jpg',

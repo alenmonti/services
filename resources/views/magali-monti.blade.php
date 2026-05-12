@@ -41,11 +41,11 @@ $serviceColors = [
         
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <a href="/" class="hover:text-primary transition-colors">Consultorio</a>
-            <a href="#" class="hover:text-primary transition-colors">Inicio</a>
-            <a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
-            <a href="#sobre-mi" class="hover:text-primary transition-colors">Sobre Mí</a>
-            <a href="#contacto" class="hover:text-primary transition-colors">Contacto</a>
+            <a href="/" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Consultorio</a>
+            <a href="#" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Inicio</a>
+            <a href="#servicios" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Servicios</a>
+            <a href="#sobre-mi" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Sobre Mí</a>
+            <a href="#contacto" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Contacto</a>
             <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white px-8 py-2.5 transition-all text-xs tracking-widest font-semibold uppercase rounded-full shadow-lg shadow-primary/10 hover:shadow-xl">Agendar Turno</a>
         </nav>
 

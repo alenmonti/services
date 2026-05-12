@@ -32,8 +32,7 @@
         <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
             <a href="/" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Consultorio</a>
             <a href="#" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Inicio</a>
-            <a href="#clinica" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Clínica</a>
-            <a href="#estetica" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Estética</a>
+            <a href="#servicios" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Servicios</a>
             <a href="#equipo" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Equipo</a>
             <a href="#contacto" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Contacto</a>
             <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white px-8 py-2.5 transition-all text-xs tracking-widest font-semibold uppercase rounded-full shadow-lg shadow-[#405b6a]/10 hover:shadow-xl">Agendar Turno</a>
@@ -63,8 +62,7 @@
         <nav class="flex flex-col gap-6 px-6 py-8">
             <a href="/" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Consultorio</a>
             <a href="#" @click="mobileMenuOpen = false" class="text-gray-900 font-medium text-lg hover:text-[#405b6a] transition-colors">Inicio</a>
-            <a href="#clinica" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Clínica</a>
-            <a href="#estetica" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Estética</a>
+            <a href="#servicios" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Servicios</a>
             <a href="#equipo" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Equipo</a>
             <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Contacto</a>
             <a href="#contacto" @click="mobileMenuOpen = false" class="bg-[#405b6a] text-white px-6 py-3.5 rounded-full font-bold uppercase text-xs tracking-widest transition-colors hover:bg-[#314652] text-center mt-4">Agendar Turno</a>
@@ -117,6 +115,7 @@
             </section>
         </div>
 
+        <span id="servicios"></span>
         @forelse($groups as $index => $group)
         @php
             $bgClass = $index % 2 === 0 ? 'bg-white' : 'bg-[#f0f2f4]';

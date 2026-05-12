@@ -32,10 +32,10 @@
             <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-36 h-auto object-contain">
         </a>
         <nav class="hidden md:flex gap-8 text-sm font-medium text-stone-500">
-            <a href="#" class="text-brand border-b-2 border-brand pb-1">Inicio</a>
-            <a href="#especialistas" class="hover:text-brand transition-colors pb-1 border-b-2 border-transparent">Profesionales</a>
-            <a href="#espacio" class="hover:text-brand transition-colors pb-1 border-b-2 border-transparent">Espacio</a>
-            <a href="#contacto" class="hover:text-brand transition-colors pb-1 border-b-2 border-transparent">Contacto</a>
+            <a href="#" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Inicio</a>
+            <a href="#especialistas" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Profesionales</a>
+            <a href="#espacio" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Espacio</a>
+            <a href="#contacto" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Contacto</a>
         </nav>
         <a href="#contacto" class="hidden md:inline-flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors">
             Agendar Turno
@@ -80,7 +80,7 @@
             <div class="flex flex-col items-start text-left">
                 <div class="flex items-center gap-2 text-brand text-xs font-semibold tracking-widest uppercase mb-6">
                     <x-heroicon-o-check-badge class="w-4 h-4" />
-                    <span>Bienestar Integral</span>
+                    <span>Profesionales de la salud</span>
                 </div>
                 <h1 class="font-serif text-4xl md:text-6xl text-stone-900 leading-[1.1] mb-6">
                     Consultorio Monti - Un espacio dedicado a tu bienestar integral.
@@ -161,9 +161,11 @@
                     </div>
                 </div>
             </div>
-            <div class="w-full md:w-1/2 flex flex-col sm:flex-row h-[500px] md:h-auto">
-                <img src="{{ web_image('welcome.clinic_psicoterapia') }}" alt="Consultorio Psicoterapia" class="w-full sm:w-1/2 h-1/2 sm:h-full object-cover">
-                <img src="{{ web_image('welcome.clinic_dermatologia') }}" alt="Consultorio Dermatología" class="w-full sm:w-1/2 h-1/2 sm:h-full object-cover">
+            <div class="w-full md:w-1/2 grid grid-cols-2 gap-0 h-[500px] md:h-auto">
+                <img src="{{ web_image('welcome.clinic_psicoterapia') }}" alt="Consultorio Psicoterapia" class="w-full h-full object-cover">
+                <img src="{{ web_image('welcome.clinic_dermatologia') }}" alt="Consultorio Dermatología" class="w-full h-full object-cover">
+                <img src="{{ web_image('welcome.clinic_psicoterapia2') }}" alt="Consultorio Psicoterapia" class="w-full h-full object-cover">
+                <img src="{{ web_image('welcome.clinic_dermatologia2') }}" alt="Consultorio Dermatología" class="w-full h-full object-cover">
             </div>
         </section>
 
