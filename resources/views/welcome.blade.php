@@ -234,54 +234,50 @@
     </section>
 
     <!-- Footer -->
-    <footer id="contacto" class="w-full bg-[#EEEEEC] pt-16 pb-8 border-t border-stone-200">
-        <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+    <footer class="bg-[#405b6a] text-white py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-16 mb-20">
+                <div class="md:col-span-2 flex flex-col items-center md:items-start">
+                    <a href="/" class="inline-block w-48 h-auto object-contain mb-8 hover:opacity-80 transition-opacity">
+                        <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain">
+                    </a>
+                    <p class="text-white/60 text-base max-w-sm leading-relaxed mb-8">
+                        Cuidamos tu salud integral con profesionalismo y calidez humana. Psicología y Dermatología en un solo lugar.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#405b6a] transition-all">
+                            <x-heroicon-o-globe-alt class="w-4 h-4" />
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#405b6a] transition-all">
+                            <x-heroicon-o-phone class="w-4 h-4" />
+                        </a>
+                    </div>
+                </div>
+    
+                <div>
+                    <h4 class="text-xs font-bold tracking-[0.2em] text-white/40 uppercase mb-8">Navegación</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm hover:text-white/60 transition-colors">Inicio</a></li>
+                        <li><a href="#especialistas" class="text-sm hover:text-white/60 transition-colors">Profesionales</a></li>
+                        <li><a href="#espacio" class="text-sm hover:text-white/60 transition-colors">Espacio</a></li>
+                        <li><a href="#contacto" class="text-sm hover:text-white/60 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+    
+                <div>
+                    <h4 class="text-xs font-bold tracking-[0.2em] text-white/40 uppercase mb-8">Información</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-sm hover:text-white/60 transition-colors">Términos y condiciones</a></li>
+                        <li><a href="#" class="text-sm hover:text-white/60 transition-colors">Política de privacidad</a></li>
+                        <li><a href="#" class="text-sm hover:text-white/60 transition-colors">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+            </div>
             
-            <!-- Brand & Bio -->
-            <div class="col-span-1 md:col-span-2">
-                <div class="flex items-center justify-center md:justify-start gap-2 mb-6">
-                    <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-40 h-auto object-contain">
-                </div>
-                <p class="text-sm text-stone-500 font-light leading-relaxed mb-6 max-w-sm">
-                    Cuidamos tu salud integral con profesionalismo y calidez humana. Psicología y Dermatología en un solo lugar.
-                </p>
-                <div class="flex gap-5 text-stone-400">
-                    <a href="#" class="hover:text-[#A55F51] transition-colors">
-                        <x-heroicon-o-globe-alt class="w-5 h-5" />
-                    </a>
-                    <a href="#" class="hover:text-[#A55F51] transition-colors">
-                        <x-heroicon-o-phone class="w-5 h-5" />
-                    </a>
-                    <a href="#" class="hover:text-[#A55F51] transition-colors">
-                        <x-heroicon-o-map-pin class="w-5 h-5" />
-                    </a>    
-                </div>
+            <div class="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase">
+                <p>&copy; 2026 Consultorio Monti. Todos los derechos reservados a bewit.com.ar</p>
+                <div class="flex items-center gap-2"></div>
             </div>
-
-            <!-- Servicios -->
-            <div class="col-span-1">
-                <h4 class="font-sans font-semibold text-[11px] tracking-[0.15em] text-brand uppercase mb-6">Servicios</h4>
-                <ul class="flex flex-col gap-4 text-sm text-stone-500 font-light">
-                    <li><a href="#" class="hover:text-stone-900 transition-colors">Psicoterapia Individual</a></li>
-                    <li><a href="#" class="hover:text-stone-900 transition-colors">Orientación a Padres</a></li>
-                    <li><a href="#" class="hover:text-stone-900 transition-colors">Evaluación Psicopedagógica</a></li>
-                </ul>
-            </div>
-
-            <!-- Legal -->
-            <div class="col-span-1">
-                <h4 class="font-sans font-semibold text-[11px] tracking-[0.15em] text-brand uppercase mb-6">Legal</h4>
-                <ul class="flex flex-col gap-4 text-sm text-stone-500 font-light">
-                    <li><a href="#" class="hover:text-stone-900 transition-colors">Aviso Legal</a></li>
-                    <li><a href="#" class="hover:text-stone-900 transition-colors">Privacidad</a></li>
-                </ul>
-            </div>
-        </div>
-
-        
-
-        <div class="max-w-6xl mx-auto px-6 text-center text-stone-400 text-xs font-light">
-            &copy; {{ date('Y') }} Consultorio Monti. Todos los derechos reservados.
         </div>
     </footer>
 

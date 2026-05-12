@@ -329,8 +329,8 @@
                     <h4 class="text-xs font-bold tracking-[0.2em] text-white/40 uppercase mb-8">Navegación</h4>
                     <ul class="space-y-4">
                         <li><a href="#" class="text-sm hover:text-white/60 transition-colors">Inicio</a></li>
-                        <li><a href="#clinica" class="text-sm hover:text-white/60 transition-colors">Tratamientos</a></li>
-                        <li><a href="#equipo" class="text-sm hover:text-white/60 transition-colors">La Dra. Mailín</a></li>
+                        <li><a href="#servicios" class="text-sm hover:text-white/60 transition-colors">Tratamientos</a></li>
+                        <li><a href="#equipo" class="text-sm hover:text-white/60 transition-colors">Sobre Mí</a></li>
                         <li><a href="#contacto" class="text-sm hover:text-white/60 transition-colors">Contacto</a></li>
                     </ul>
                 </div>
@@ -346,12 +346,8 @@
             </div>
             
             <div class="pt-10 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-6 text-white/40 text-[10px] font-bold tracking-[0.2em] uppercase">
-                <p>&copy; 2024 Dra. Mailín Monti. Todos los derechos reservados.</p>
-                <div class="flex items-center gap-2">
-                    <span>Diseño de Vanguardia</span>
-                    <span class="w-1 h-1 bg-white/20 rounded-full"></span>
-                    <span>Salud Consciente</span>
-                </div>
+                <p>&copy; 2026 Dra. Mailín Monti. Todos los derechos reservados a bewit.com.ar</p>
+                <div class="flex items-center gap-2"></div>
             </div>
         </div>
     </footer>
