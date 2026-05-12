@@ -101,7 +101,7 @@ use App\Models\Professional;
                     </div>
 
                     <!-- Floating Badge -->
-                    <div class="absolute left-4 md:-left-10 top-4 md:top-auto md:-bottom-10 bg-white/75 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute left-4 md:-left-10 md:top-auto -bottom-10 bg-white/75 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
                         <div class="flex items-start gap-4">
                             <div class="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
                                 <x-heroicon-o-heart class="w-6 h-6" />
@@ -413,6 +413,10 @@ use App\Models\Professional;
             </div>
         </div>
     </footer>
+
+    <a href="https://wa.me/5492974014639" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300" title="WhatsApp">
+        <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
+    </a>
 
 </body>
 </html>
