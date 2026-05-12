@@ -8,24 +8,29 @@
     <link rel="icon" href="{{ web_image('welcome.logo-ico') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         [x-cloak] { display: none !important; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        p, a, button, li, span, small, label, input, textarea { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#f8f9fa] text-gray-900 font-sans antialiased overflow-x-hidden">
+<body class="bg-[#f8f9fa] text-gray-900 font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
     
     <!-- Navbar -->
-    <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50" x-data="{ mobileMenuOpen: false }">
-        <a href="#" class="block w-40 md:w-56 shrink-0">
+    <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50">
+        <a href="#" class="block w-30 md:w-40 shrink-0">
             <!-- Logo -->
             <img src="{{ web_image('mailin.logo') }}" alt="Dra. Mailín Monti" class="w-full h-auto object-contain">
         </a>
         
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
+            <a href="/" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Consultorio</a>
             <a href="#" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Inicio</a>
             <a href="#clinica" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Clínica</a>
             <a href="#estetica" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Estética</a>
@@ -35,22 +40,36 @@
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-[#405b6a] hover:bg-gray-100 transition-colors">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-[#405b6a] hover:bg-gray-100 transition-colors rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
             </svg>
         </button>
-
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-cloak class="absolute top-20 left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col gap-4 md:hidden">
-            <a href="#" @click="mobileMenuOpen = false" class="text-gray-800 font-medium border-b border-gray-100 pb-2">Inicio</a>
-            <a href="#clinica" @click="mobileMenuOpen = false" class="text-gray-800 font-medium border-b border-gray-100 pb-2">Clínica</a>
-            <a href="#estetica" @click="mobileMenuOpen = false" class="text-gray-800 font-medium border-b border-gray-100 pb-2">Estética</a>
-            <a href="#equipo" @click="mobileMenuOpen = false" class="text-gray-800 font-medium border-b border-gray-100 pb-2">Equipo</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-800 font-medium">Contacto</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-[#405b6a] text-white text-center py-4 mt-2 font-bold uppercase text-xs tracking-widest rounded-xl shadow-lg shadow-[#405b6a]/10">Agendar Turno</a>
-        </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-cloak @click.outside="mobileMenuOpen = false" class="fixed inset-0 bg-white z-[60] md:hidden flex flex-col">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center px-4 md:px-8 py-6 border-b border-gray-200">
+            <img src="{{ web_image('mailin.logo') }}" alt="Dra. Mailín Monti" class="w-22 h-auto object-contain">
+            <button @click="mobileMenuOpen = false" class="p-2 text-[#405b6a] hover:bg-gray-100 transition-colors rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menu Items -->
+        <nav class="flex flex-col gap-6 px-6 py-8">
+            <a href="/" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Consultorio</a>
+            <a href="#" @click="mobileMenuOpen = false" class="text-gray-900 font-medium text-lg hover:text-[#405b6a] transition-colors">Inicio</a>
+            <a href="#clinica" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Clínica</a>
+            <a href="#estetica" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Estética</a>
+            <a href="#equipo" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Equipo</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Contacto</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-[#405b6a] text-white px-6 py-3.5 rounded-full font-bold uppercase text-xs tracking-widest transition-colors hover:bg-[#314652] text-center mt-4">Agendar Turno</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
@@ -65,10 +84,10 @@
                         Dermatología integral con enfoque clínico y estético. Proporcionamos tratamientos personalizados de vanguardia en un ambiente de serenidad y profesionalismo.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-                        <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white text-center px-10 py-4.5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-xl shadow-[#405b6a]/20 hover:scale-105 active:scale-95">
+                        <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-xl shadow-[#405b6a]/20 hover:scale-105 active:scale-95">
                             Agendar Turno
                         </a>
-                        <a href="#estetica" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-4.5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-sm hover:shadow-md">
+                        <a href="#estetica" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-sm hover:shadow-md">
                             Conocer más
                         </a>
                     </div>
@@ -81,7 +100,7 @@
                     </div>
 
                     <!-- Floating Badge (Cartelito) -->
-                    <div class="absolute -bottom-6 md:-bottom-10 left-4 md:-left-10 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute left-4 md:-left-10 top-4 md:top-auto md:-bottom-10 bg-white/50 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
                         <div class="flex items-start gap-4">
                             <div class="p-3 bg-[#405b6a]/10 text-[#405b6a] rounded-xl shrink-0">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -227,7 +246,7 @@
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="grid md:grid-cols-2 gap-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#405b6a]/10">
                     <!-- Info Contacto -->
-                    <div class="bg-white p-12 md:p-20 flex flex-col justify-center">
+                    <div class="bg-white p-6 md:p-20 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-[1px] w-8 bg-[#405b6a]"></span>
                             <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
@@ -290,9 +309,9 @@
     <footer class="bg-[#405b6a] text-white py-24">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid md:grid-cols-4 gap-16 mb-20">
-                <div class="md:col-span-2">
+                <div class="md:col-span-2 flex flex-col items-center md:items-start">
                     <a href="/" class="inline-block w-48 h-auto object-contain mb-8 hover:opacity-80 transition-opacity">
-                        <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain invert">
+                        <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain">
                     </a>
                     <p class="text-white/60 text-base max-w-sm leading-relaxed mb-8">
                         Excelencia médica y calidez humana al servicio de tu piel. Llevamos la dermatología a un nuevo estándar de cuidado personalizado.

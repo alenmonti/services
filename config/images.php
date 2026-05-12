@@ -22,6 +22,6 @@ return [
     'mailin' => [
         'hero' => 'web/mailin-monti/mailin-hero.jpeg',
         'profile' => 'web/mailin-monti/mailin-profile.jpeg',
-        'logo' => 'web/mailin-monti/logo.jpeg',
+        'logo' => 'web/mailin-monti/logo.png',
     ],
 ];

@@ -19,17 +19,21 @@ $serviceColors = [
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="{{ web_image('welcome.logo-ico') }}" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         [x-cloak] { display: none !important; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+        .font-sans { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
+        p, a, button, li, span, small, label, input, textarea { font-family: 'Inter', sans-serif; }
     </style>
 </head>
-<body class="bg-[#faf9f7] text-gray-900 font-sans antialiased overflow-x-hidden">
+<body class="bg-[#f8f9fa] text-gray-900 font-sans antialiased overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
     
     <!-- Navbar -->
-    <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50" x-data="{ mobileMenuOpen: false }">
+    <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50">
         <a href="#" class="block w-40 md:w-56 shrink-0">
             <!-- Logo -->
             <img src="{{ web_image('magali.logo') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-full h-auto object-contain">
@@ -37,68 +41,90 @@ $serviceColors = [
         
         <!-- Desktop Nav -->
         <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
+            <a href="/" class="hover:text-primary transition-colors">Consultorio</a>
             <a href="#" class="hover:text-primary transition-colors">Inicio</a>
             <a href="#servicios" class="hover:text-primary transition-colors">Servicios</a>
             <a href="#sobre-mi" class="hover:text-primary transition-colors">Sobre Mí</a>
             <a href="#contacto" class="hover:text-primary transition-colors">Contacto</a>
-            <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full transition-colors">Agendar Turno</a>
+            <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white px-8 py-2.5 transition-all text-xs tracking-widest font-semibold uppercase rounded-full shadow-lg shadow-primary/10 hover:shadow-xl">Agendar Turno</a>
         </nav>
 
         <!-- Mobile Menu Button -->
-        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 bg-primary/5 rounded-xl text-primary hover:bg-primary/10 transition-colors">
-            <x-heroicon-o-bars-3 class="w-6 h-6" />
+        <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
         </button>
-
-        <!-- Mobile Menu -->
-        <div x-show="mobileMenuOpen" x-cloak class="absolute top-20 left-0 w-full bg-white shadow-lg py-4 px-4 flex flex-col gap-4 md:hidden">
-            <a href="#" @click="mobileMenuOpen = false" class="text-gray-800 font-medium">Inicio</a>
-            <a href="#servicios" @click="mobileMenuOpen = false" class="text-gray-800 font-medium">Servicios</a>
-            <a href="#sobre-mi" @click="mobileMenuOpen = false" class="text-gray-800 font-medium">Sobre Mí</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-800 font-medium">Contacto</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-primary text-white text-center py-3 rounded-md mt-2 font-medium">Agendar Turno</a>
-        </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div x-show="mobileMenuOpen" x-cloak @click.outside="mobileMenuOpen = false" class="fixed inset-0 bg-white z-[60] md:hidden flex flex-col">
+        <!-- Close Button -->
+        <div class="flex justify-between items-center px-4 md:px-8 py-6 border-b border-gray-200">
+            <img src="{{ web_image('magali.logo') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-32 h-auto object-contain">
+            <button @click="mobileMenuOpen = false" class="p-2 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menu Items -->
+        <nav class="flex flex-col gap-6 px-6 py-8">
+            <a href="/" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Consultorio</a>
+            <a href="#" @click="mobileMenuOpen = false" class="text-gray-900 font-medium text-lg hover:text-primary transition-colors">Inicio</a>
+            <a href="#servicios" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Servicios</a>
+            <a href="#sobre-mi" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Sobre Mí</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Contacto</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-primary text-white px-6 py-3.5 rounded-full font-bold uppercase text-xs tracking-widest transition-colors hover:bg-primary-hover text-center mt-4">Agendar Turno</a>
+        </nav>
+    </div>
 
     <main>
         <!-- Hero Section -->
-        <section class="max-w-7xl mx-auto px-4 md:px-8 pt-8 md:pt-16 pb-16 md:pb-24 grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1 flex flex-col items-center text-center md:items-start md:text-left">
-                <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-tight text-gray-900 mb-6">
-                    Encontrá un espacio de escucha y bienestar.
-                </h1>
-                <p class="text-gray-600 text-lg md:text-xl mb-8 max-w-lg leading-relaxed">
-                    Psicoterapia orientada a fortalecer recursos personales y emocionales en un ambiente de calidez, respeto y profesionalismo.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white text-center px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
-                        Agendar Turno
-                    </a>
-                    <a href="#servicios" class="border border-gray-300 text-gray-700 hover:bg-gray-50 text-center px-8 py-3.5 rounded-full font-medium transition-colors w-full sm:w-auto">
-                        Conocer más
-                    </a>
+        <div class="bg-[#f0f2f4]">
+            <section class="max-w-7xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-16 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
+                <div class="order-2 md:order-1 flex flex-col items-center text-center md:items-start md:text-left">
+                    <span class="text-xs font-bold tracking-widest text-primary/60 uppercase mb-4 block">Psicoterapia para tu bienestar emocional</span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] text-gray-900 mb-6">
+                        Encontrá un espacio de escucha, calma y crecimiento personal
+                    </h1>
+                    <p class="text-gray-600 text-lg mb-8 max-w-lg leading-relaxed">
+                        Acompañamiento terapéutico con mirada humana y profesional para fortalecer tus recursos emocionales y construir una vida con más equilibrio.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+                        <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-xl shadow-primary/20 hover:scale-105 active:scale-95">
+                            Agendar Turno
+                        </a>
+                        <a href="#servicios" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-sm hover:shadow-md">
+                            Conocer más
+                        </a>
+                    </div>
                 </div>
-            </div>
-            <div class="order-1 md:order-2 relative flex justify-center md:justify-end">
-                <div class="relative w-full max-w-md rounded-2xl overflow-hidden shadow-xl aspect-[4/5] object-cover bg-gray-200">
-                    <img src="{{ web_image('magali.hero') }}" alt="Magali Monti" class="w-full h-full object-cover object-top">
-                </div>
-                <!-- Floating Badge -->
-                <div class="absolute -bottom-6 md:-bottom-8 left-4 md:-left-8 bg-white/90 backdrop-blur-sm p-4 rounded-xl shadow-sm max-w-[240px]">
-                    <div class="flex items-start gap-3">
-                        <div class="p-2 bg-primary/10 text-primary rounded-lg shrink-0">
-                            <x-heroicon-o-map-pin class="w-5 h-5" />
-                        </div>
-                        <div>
-                            <p class="text-sm font-semibold text-gray-800">Presencial & Online</p>
-                            <p class="text-xs text-gray-500 mt-0.5">Flexibilidad para tu bienestar diario</p>
+                <div class="order-1 md:order-2 relative flex justify-center md:justify-end">
+                    <div class="relative w-full max-w-lg aspect-square bg-gray-200 rounded-3xl shadow-2xl overflow-hidden group">
+                        <img src="{{ web_image('magali.hero') }}" alt="Magali Monti" class="w-full h-full object-cover object-top transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent opacity-60"></div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div class="absolute left-4 md:-left-10 top-4 md:top-auto md:-bottom-10 bg-white/75 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex items-start gap-4">
+                            <div class="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
+                                <x-heroicon-o-heart class="w-6 h-6" />
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-gray-900 tracking-tight">Presencial & Online</p>
+                                <p class="text-xs text-gray-500 mt-1 leading-relaxed">Un espacio terapéutico flexible para acompañarte en cada etapa.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!-- Mi Enfoque Section -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-16 md:py-24 bg-[#f0f2f4]">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="text-center mb-16">
                     <span class="text-sm font-bold tracking-widest text-primary uppercase mb-3 block">Mi Enfoque</span>
@@ -137,7 +163,7 @@ $serviceColors = [
         </section>
 
         <!-- Servicios Profesionales Section -->
-        <section id="servicios" class="py-16 md:py-24">
+        <section id="servicios" class="py-16 md:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                     <div class="max-w-xl">
@@ -225,7 +251,7 @@ $serviceColors = [
         </section>
 
         <!-- Sobre Mí Section -->
-        <section id="sobre-mi" class="py-16 md:py-24 bg-white">
+        <section id="sobre-mi" class="py-16 md:py-24 bg-[#f0f2f4]">
             <div class="max-w-7xl mx-auto px-4 md:px-8 grid md:grid-cols-2 gap-12 items-center">
                 <div class="relative w-full aspect-square md:aspect-[4/5] rounded-3xl overflow-hidden shadow-lg">
                     <img src="{{ web_image('magali.profile') }}" alt="Conoceme - Magali Monti" class="w-full h-full object-cover object-left">
@@ -271,7 +297,7 @@ $serviceColors = [
         </section>
 
         <!-- Testimonial Section -->
-        <section class="py-20 md:py-32 bg-bg-light relative overflow-hidden">
+        <section class="py-20 md:py-32 bg-white relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-4 md:px-8 text-center relative z-10">
                 <div class="text-[#e2dac3] mb-6 inline-block">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-12 h-12 md:w-16 md:h-16 mx-auto" aria-hidden="true">
@@ -294,7 +320,7 @@ $serviceColors = [
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="grid md:grid-cols-2 gap-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#405b6a]/10">
                     <!-- Info Contacto -->
-                    <div class="bg-white p-12 md:p-20 flex flex-col justify-center">
+                    <div class="bg-white p-6 md:p-20 flex flex-col justify-center">
                         <div class="flex items-center gap-3 mb-6">
                             <span class="h-[1px] w-8 bg-[#405b6a]"></span>
                             <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
@@ -353,12 +379,12 @@ $serviceColors = [
     </main>
 
     <!-- Footer -->
-    <footer class="bg-bg-light border-t border-gray-200 pt-16 pb-8">
+    <footer class="bg-[#405b6a] border-t border-white/10 pt-16 pb-8 text-white">
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-                <div class="md:col-span-2">
+                <div class="md:col-span-2 flex flex-col items-center md:items-start">
                     <a href="/" class="inline-block w-48 h-auto object-contain mb-8 hover:opacity-80 transition-opacity">
-                        <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain invert">
+                        <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain">
                     </a>
                     <p class="text-gray-500 text-sm max-w-sm leading-relaxed mb-8">
                         Psicología con un enfoque humano y profesional. Un espacio para encontrarte con uno mismo.
