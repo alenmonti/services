@@ -18,7 +18,9 @@ class ServiceGroupResource extends Resource
 {
     protected static ?string $model = ServiceGroup::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+        protected static ?string $navigationLabel = 'group';
+
+        protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedFolderOpen;
 
     public static function form(Schema $schema): Schema
     {
