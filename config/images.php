@@ -15,6 +15,13 @@ return [
         'logo-ico' => 'web/welcome/logo-ico.ico',
         'logo-transparent' => 'web/welcome/logo-transparent.png',
     ],
+    'social' => [
+        'gmail' => 'web/social/gmail.png',
+        'instagram' => 'web/social/instagram.png',
+        'wsp' => 'web/social/wsp.png',
+        'search' => 'web/social/search.png',
+        'tik-tok' => 'web/social/tik-tok.png',
+    ],
     'magali' => [
         'logo' => 'web/magali-monti/logo.png',
         'hero' => 'web/magali-monti/magali-conferencia.avif',

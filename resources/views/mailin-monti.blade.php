@@ -243,6 +243,20 @@
         <!-- Encuéntranos Section -->
         <section id="contacto" class="py-20 md:py-32 bg-[#e8ebe6] relative">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
+                <div class="mb-8 flex flex-wrap items-center justify-center md:justify-center gap-8 md:gap-12">
+                    <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
+                        <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="mailto:consultoriodramonti@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
+                        <img src="{{ web_image('social.gmail') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="https://www.instagram.com/dra.mailinmonti/" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Instagram">
+                        <img src="{{ web_image('social.instagram') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="https://consultoriomonti.bewit.com.ar/" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Sitio Web">
+                        <img src="{{ web_image('social.search') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                </div>
                 <div class="grid md:grid-cols-2 gap-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#405b6a]/10">
                     <!-- Info Contacto -->
                     <div class="bg-white p-6 md:p-20 flex flex-col justify-center">
@@ -315,12 +329,18 @@
                     <p class="text-white/60 text-base max-w-sm leading-relaxed mb-8">
                         Excelencia médica y calidez humana al servicio de tu piel. Llevamos la dermatología a un nuevo estándar de cuidado personalizado.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#405b6a] transition-all">
-                            <x-heroicon-o-share class="w-4 h-4" />
+                    <div class="flex items-center gap-4">
+                        <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
+                            <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#405b6a] transition-all">
-                            <x-heroicon-o-camera class="w-4 h-4" />
+                        <a href="mailto:consultoriodramonti@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
+                            <img src="{{ web_image('social.gmail') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
+                        </a>
+                        <a href="https://www.instagram.com/dra.mailinmonti/" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Instagram">
+                            <img src="{{ web_image('social.instagram') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
+                        </a>
+                        <a href="https://consultoriomonti.bewit.com.ar/" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Sitio">
+                            <img src="{{ web_image('social.search') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
                         </a>
                     </div>
                 </div>

@@ -1,13 +1,6 @@
 @php
 use App\Models\Service;
 use App\Models\Professional;
-
-$serviceColors = [
-    'bg-[#fdebea]', // Orientación a padres / salmón
-    'bg-[#cffafe]', // Psicopedagogía / celeste
-    'bg-[#e5e7eb]', // Talleres / gris
-    'bg-white',
-];
 @endphp
 
 <!doctype html>
@@ -34,7 +27,7 @@ $serviceColors = [
     
     <!-- Navbar -->
     <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50">
-        <a href="#" class="block w-40 md:w-56 shrink-0">
+        <a href="https://consultoriomonti.bewit.com.ar/" class="block w-40 md:w-56 shrink-0">
             <!-- Logo -->
             <img src="{{ web_image('magali.logo') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-full h-auto object-contain">
         </a>
@@ -167,7 +160,7 @@ $serviceColors = [
             <div class="max-w-7xl mx-auto px-4 md:px-8">
                 <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                     <div class="max-w-xl">
-                        <h2 class="font-serif text-3xl md:text-4xl text-gray-900 font-medium mb-4">Servicios Profesionales</h2>
+                        <h2 class="font-serif text-3xl md:text-4xl text-gray-900 font-semibold mb-4">Servicios Profesionales</h2>
                         <p class="text-gray-600">Brindo atención integral adaptada a las necesidades específicas de cada etapa de la vida.</p>
                     </div>
                     <a href="#contacto" class="text-primary font-medium hover:underline inline-flex items-center gap-1">
@@ -176,76 +169,45 @@ $serviceColors = [
                     </a>
                 </div>
 
-                <!-- Bento Grid for Services -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-                    @foreach($services as $index => $service)
-                        @php
-                            // Lógica para asignar tamaño y color
-                            // Primer servicio más grande, ocupa 2 columnas en desktop
-                            $isFirst = $index === 0;
-                            $colorClass = $serviceColors[($index > 0 ? $index - 1 : 0) % count($serviceColors)];
-                            if($isFirst) {
-                                $colorClass = 'bg-white shadow-sm';
-                            }
-                        @endphp
-
-                        <div class="{{ $isFirst ? 'md:col-span-2' : 'col-span-1' }} {{ $colorClass }} rounded-3xl p-8 md:p-10 flex flex-col {{ $isFirst ? 'md:flex-row md:items-center' : '' }} gap-8 overflow-hidden relative">
-                            
-                            <div class="flex-1 z-10 flex flex-col h-full justify-between">
-                                <div>
-                                    <h3 class="font-serif text-2xl font-medium text-gray-900 mb-3">{{ $service->title }}</h3>
-                                    <p class="text-gray-700 leading-relaxed mb-4">{{ $service->description }}</p>
-                                    @if($service->price)
-                                        <p class="text-sm font-semibold text-primary mb-6">Valor de sesión: ${{ number_format($service->price, 0, ',', '.') }}</p>
-                                    @endif
-                                </div>
-                                
-                                @if($isFirst)
-                                    <div class="space-y-3">
-                                        <div class="flex items-center gap-3 text-sm text-gray-600">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-400">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                            <span>60 minutos por sesión</span>
-                                        </div>
-                                        <div class="flex items-center gap-3 text-sm text-gray-600">
-                                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-gray-400">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
-                                            </svg>
-                                            <span>Modalidad Online o Presencial</span>
-                                        </div>
-                                    </div>
-                                @elseif($index === 3)
-                                    <div class="mt-4">
-                                        <a href="#contacto" class="inline-block bg-white text-gray-800 px-6 py-2 rounded-full text-sm font-medium shadow-sm hover:shadow transition-shadow">Ver Agenda</a>
-                                    </div>
-                                @endif
-                                
-                                <!-- Icon for non-first cards based on index -->
-                                @if(!$isFirst && $index === 1)
-                                    <div class="mt-auto pt-6 text-[#d97771]">
-                                        <x-heroicon-o-user-group class="w-8 h-8" />
-                                    </div>
-                                @elseif(!$isFirst && $index === 2)
-                                    <div class="mt-auto pt-6 text-[#4a9fcc]">
-                                        <x-heroicon-o-pencil-square class="w-8 h-8" />
-                                    </div>
-                                @endif
-                            </div>
-
+                <!-- Services Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    @forelse($services as $service)
+                        <div class="group bg-white rounded-2xl overflow-hidden flex flex-col h-full shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_rgba(64,91,106,0.12)] transition-all duration-500 hover:-translate-y-2">
                             @if($service->image)
-                                <!-- Service Image from DB -->
-                                <div class="{{ $isFirst ? 'w-full md:w-5/12 h-64 md:h-full' : 'w-full h-40 mt-6' }} rounded-2xl overflow-hidden shrink-0 {{ !$isFirst ? 'order-first mb-4' : 'mt-6 md:mt-0' }}">
-                                    <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="w-full h-full object-cover">
+                                <div class="w-full h-56 relative overflow-hidden">
+                                    <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                                 </div>
-                            @elseif($isFirst)
-                                <!-- Fallback Real Space Image if no image in DB -->
-                                <div class="w-full md:w-5/12 h-64 md:h-full rounded-2xl overflow-hidden shrink-0 mt-6 md:mt-0">
-                                    <img src="https://images.unsplash.com/photo-1550136513-548af4445338?auto=format&fit=crop&q=80&w=800" alt="Espacio Real" class="w-full h-full object-cover">
+                            @else
+                                <div class="w-full h-56 bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center">
+                                    <x-heroicon-o-heart class="w-12 h-12 text-primary/30" />
                                 </div>
                             @endif
+                            
+                            <div class="p-8 flex flex-col flex-1">
+                                <h3 class="text-xl font-serif font-semibold text-gray-900 group-hover:text-primary transition-colors mb-3 leading-tight">{{ $service->title }}</h3>
+                                <p class="text-gray-600 text-xs leading-relaxed mb-6 flex-1">{{ $service->description }}</p>
+                                
+                                <div class="flex items-center justify-between pt-2">
+                                    @if($service->price)
+                                        <div class="flex flex-col">
+                                            <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Sesión</span>
+                                            <p class="text-lg font-bold text-primary">${{ number_format($service->price, 0, ',', '.') }}</p>
+                                        </div>
+                                    @endif
+                                    <a href="#contacto" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-primary uppercase group/link">
+                                        <span>Consultar</span>
+                                        <x-heroicon-o-arrow-right class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                                    </a>
+                                </div>
+                            </div>
                         </div>
-                    @endforeach
+                    @empty
+                        <div class="col-span-full text-center py-20 bg-white/50 rounded-2xl border-2 border-dashed border-gray-100">
+                            <x-heroicon-o-face-frown class="w-12 h-12 text-gray-300 mx-auto mb-4" />
+                            <p class="text-gray-400 font-medium">No hay servicios disponibles.</p>
+                        </div>
+                    @endforelse
                 </div>
             </div>
         </section>
@@ -315,9 +277,26 @@ $serviceColors = [
             </div>
         </section>
 
-        <!-- Encuéntranos Section (copied from Mailín) -->
+        <!-- Encuéntranos Section -->
         <section id="contacto" class="py-20 md:py-32 bg-[#e8ebe6] relative">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
+                <div class="mb-8 flex flex-wrap items-center justify-center md:justify-center gap-8 md:gap-12">
+                    <a href="https://wa.me/5492974014639" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
+                        <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="mailto:magalimonti91@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
+                        <img src="{{ web_image('social.gmail') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="https://www.instagram.com/lic.magalimonti" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Instagram">
+                        <img src="{{ web_image('social.instagram') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="https://www.tiktok.com/@lic.magalimonti" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="TikTok">
+                        <img src="{{ web_image('social.tik-tok') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                    <a href="https://consultoriomonti.bewit.com.ar/" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Sitio Web">
+                        <img src="{{ web_image('social.search') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
+                    </a>
+                </div>
                 <div class="grid md:grid-cols-2 gap-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#405b6a]/10">
                     <!-- Info Contacto -->
                     <div class="bg-white p-6 md:p-20 flex flex-col justify-center">
@@ -340,27 +319,27 @@ $serviceColors = [
 
                             <div class="flex items-start gap-6 group">
                                 <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
-                                    <x-heroicon-o-envelope class="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
-                                    <a href="mailto:magalimonti@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">magalimonti@gmail.com</a>
-                                </div>
+                                        <x-heroicon-o-envelope class="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
+                                        <a href="mailto:magalimonti91@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">magalimonti91@gmail.com</a>
+                                    </div>
                             </div>
 
                             <div class="flex items-start gap-6 group">
                                 <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
-                                    <x-heroicon-o-phone class="w-6 h-6" />
-                                </div>
-                                <div>
-                                    <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
-                                    <a href="tel:+541130968455" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 5874 2412</a>
-                                </div>
+                                        <x-heroicon-o-phone class="w-6 h-6" />
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
+                                        <a href="tel:+5492974014639" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 9 2974 01-4639</a>
+                                    </div>
                             </div>
                         </div>
 
                         <div class="mt-16">
-                            <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
+                            <a href="https://wa.me/5492974014639" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
                                 Agendar Turno
                                 <x-heroicon-o-arrow-right class="w-4 h-4" />
                             </a>
@@ -383,18 +362,27 @@ $serviceColors = [
         <div class="max-w-7xl mx-auto px-4 md:px-8">
             <div class="grid md:grid-cols-4 gap-16 mb-20">
                 <div class="md:col-span-2 flex flex-col items-center md:items-start">
-                    <a href="/" class="inline-block w-48 h-auto object-contain mb-8 hover:opacity-80 transition-opacity">
+                    <a href="https://consultoriomonti.bewit.com.ar/" class="inline-block w-48 h-auto object-contain mb-8 hover:opacity-80 transition-opacity">
                         <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-full h-auto object-contain">
                     </a>
                     <p class="text-white/60 text-base max-w-sm leading-relaxed mb-8">
                         Psicología con un enfoque humano y profesional. Un espacio para encontrarte con uno mismo.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#405b6a] transition-all">
-                            <x-heroicon-o-share class="w-4 h-4" />
+                    <div class="flex items-center gap-4">
+                        <a href="https://wa.me/5492974014639" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
+                            <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
                         </a>
-                        <a href="#" class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white hover:text-[#405b6a] transition-all">
-                            <x-heroicon-o-camera class="w-4 h-4" />
+                        <a href="mailto:magalimonti91@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
+                            <img src="{{ web_image('social.gmail') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
+                        </a>
+                        <a href="https://www.instagram.com/lic.magalimonti" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Instagram">
+                            <img src="{{ web_image('social.instagram') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
+                        </a>
+                        <a href="https://www.tiktok.com/@lic.magalimonti" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="TikTok">
+                            <img src="{{ web_image('social.tik-tok') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
+                        </a>
+                        <a href="https://consultoriomonti.bewit.com.ar/" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Sitio">
+                            <img src="{{ web_image('social.search') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
                         </a>
                     </div>
                 </div>
