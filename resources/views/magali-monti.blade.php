@@ -184,9 +184,14 @@ use App\Models\Professional;
                                 </div>
                             @endif
                             
-                            <div class="p-8 flex flex-col flex-1">
+                            <div class="p-8 flex flex-col flex-1" x-data="{ expanded: false, hasMore: false }" x-init="$nextTick(() => { hasMore = $refs.desc.scrollHeight > $refs.desc.clientHeight })">
                                 <h3 class="text-xl font-serif font-semibold text-gray-900 group-hover:text-primary transition-colors mb-3 leading-tight">{{ $service->title }}</h3>
-                                <p class="text-gray-600 text-xs leading-relaxed mb-6 flex-1">{{ $service->description }}</p>
+                                <p x-ref="desc" class="text-gray-600 text-xs leading-relaxed flex-1 transition-all duration-300" :class="expanded ? '' : 'line-clamp-3'">{{ $service->description }}</p>
+                                
+                                <button x-show="hasMore" @click="expanded = !expanded" class="text-[10px] font-bold text-primary uppercase tracking-[0.1em] mt-2 mb-6 inline-flex items-center gap-1 hover:text-primary-hover transition-colors" x-cloak>
+                                    <span x-text="expanded ? 'Ver menos' : 'Leer más'"></span>
+                                    <x-heroicon-o-chevron-down class="w-3 h-3 transition-transform duration-300" x-bind:class="expanded ? 'rotate-180' : ''" />
+                                </button>
                                 
                                 <div class="flex items-center justify-between pt-2">
                                     @if($service->price)

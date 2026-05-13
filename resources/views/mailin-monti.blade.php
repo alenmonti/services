@@ -156,14 +156,19 @@
                             </div>
                         </div>
                         @endif
-                        <div class="p-8 flex flex-col flex-1 relative">
+                        <div class="p-8 flex flex-col flex-1 relative" x-data="{ expanded: false, hasMore: false }" x-init="$nextTick(() => { hasMore = $refs.desc.scrollHeight > $refs.desc.clientHeight })">
                             <div class="flex justify-between items-start mb-4">
                                 <h3 class="text-2xl font-bold text-gray-900 group-hover:text-[#405b6a] transition-colors leading-tight">{{ $service->title }}</h3>
                                 <div class="bg-[#f8f9fa] p-2 rounded-lg group-hover:bg-[#405b6a]/5 transition-colors">
                                     <x-heroicon-o-chevron-right class="w-4 h-4 text-[#405b6a]" />
                                 </div>
                             </div>
-                            <p class="text-gray-500 text-sm leading-relaxed mb-8 flex-1 line-clamp-3">{{ $service->description }}</p>
+                            <p x-ref="desc" class="text-gray-500 text-sm leading-relaxed flex-1 transition-all duration-300" :class="expanded ? '' : 'line-clamp-3'">{{ $service->description }}</p>
+                            
+                            <button x-show="hasMore" @click="expanded = !expanded" class="text-[10px] font-bold text-primary uppercase tracking-[0.1em] mt-2 mb-8 inline-flex items-center gap-1 hover:text-primary-hover transition-colors" x-cloak>
+                                <span x-text="expanded ? 'Ver menos' : 'Leer más'"></span>
+                                <x-heroicon-o-chevron-down class="w-3 h-3 transition-transform duration-300" x-bind:class="expanded ? 'rotate-180' : ''" />
+                            </button>
                             
                             <div class="flex items-center justify-between pt-4">
                                 @if($service->price)
