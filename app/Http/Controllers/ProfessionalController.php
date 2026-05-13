@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Professional;
-use Illuminate\Http\Request;
 
 class ProfessionalController extends Controller
 {
@@ -13,10 +12,12 @@ class ProfessionalController extends Controller
 
         if (! $professional) {
             $services = collect();
+
             return view('magali-monti', compact('professional', 'services'));
         }
 
         $services = $professional->services()->where('visible', true)->get();
+
         return view('magali-monti', compact('professional', 'services'));
     }
 
@@ -26,6 +27,7 @@ class ProfessionalController extends Controller
 
         if (! $professional) {
             $groups = collect();
+
             return view('mailin-monti', compact('professional', 'groups'));
         }
 

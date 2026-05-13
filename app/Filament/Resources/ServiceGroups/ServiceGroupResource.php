@@ -13,14 +13,15 @@ use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class ServiceGroupResource extends Resource
 {
     protected static ?string $model = ServiceGroup::class;
 
-        protected static ?string $navigationLabel = 'group';
+    protected static ?string $navigationLabel = 'group';
 
-        protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedFolderOpen;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedFolderOpen;
 
     public static function form(Schema $schema): Schema
     {
@@ -48,7 +49,7 @@ class ServiceGroupResource extends Resource
         ];
     }
 
-    public static function getEloquentQuery(): \Illuminate\Database\Eloquent\Builder
+    public static function getEloquentQuery(): Builder
     {
         $query = parent::getEloquentQuery();
 

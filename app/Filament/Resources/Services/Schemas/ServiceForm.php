@@ -28,8 +28,7 @@ class ServiceForm
                     ->relationship(
                         name: 'group',
                         titleAttribute: 'title',
-                        modifyQueryUsing: fn (Builder $query) => 
-                            auth()->check() && auth()->user()->professional_id 
+                        modifyQueryUsing: fn (Builder $query) => auth()->check() && auth()->user()->professional_id
                                 ? $query->where('professional_id', auth()->user()->professional_id)
                                 : $query
                     )
