@@ -90,10 +90,10 @@
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <a href="#especialistas" class="bg-brand hover:bg-brand-dark text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-brand/20">
-                        Conocer Especialidades
+                        Especialidades
                     </a>
                     <a href="#espacio" class="bg-transparent border border-stone-300 hover:border-stone-400 text-stone-700 px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-stone-200/50">
-                        Ver Instalaciones
+                        Instalaciones
                     </a>
                 </div>
             </div>
@@ -175,7 +175,7 @@
     <section id="contacto" class="py-20 md:py-32 bg-[#e8ebe6] relative">
         <div class="max-w-6xl mx-auto px-6">
             <div class="mb-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-                <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
+                <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 animate-bounce" title="WhatsApp">
                     <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
                 </a>
                 <a href="mailto:consultoriomonti@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
