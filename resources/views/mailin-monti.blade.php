@@ -172,10 +172,10 @@
                                     <p class="text-lg font-bold text-[#405b6a]">${{ number_format($service->price, 0, ',', '.') }}</p>
                                 </div>
                                 @endif
-                                <a href="#contacto" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-[#405b6a] uppercase group/link">
-                                    <span>Consultar</span>
-                                    <span class="w-8 h-[1px] bg-[#405b6a] group-hover/link:w-12 transition-all"></span>
-                                </a>
+                                    <a href="#contacto" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-primary uppercase group/link">
+                                        <span>Consultar</span>
+                                        <x-heroicon-o-arrow-right class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                                    </a>
                             </div>
                         </div>
                     </div>
