@@ -29,14 +29,14 @@
         </a>
         
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-10 text-sm font-medium text-gray-600">
-            <a href="/" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Consultorio</a>
-            <a href="#" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Inicio</a>
-            <a href="#servicios" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Servicios</a>
-            <a href="#equipo" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Equipo</a>
-            <a href="#contacto" class="hover:text-[#405b6a] transition-colors border-b-2 border-transparent hover:border-[#405b6a] pb-1">Contacto</a>
-            <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white px-8 py-2.5 transition-all text-xs tracking-widest font-semibold uppercase rounded-full shadow-lg shadow-[#405b6a]/10 hover:shadow-xl">Agendar Turno</a>
+        <nav class="hidden md:flex items-center gap-10 text-[11px] font-bold uppercase tracking-[0.1em] text-primary">
+            <a href="/" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Consultorio</a>
+            <a href="#" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Inicio</a>
+            <a href="#servicios" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Servicios</a>
+            <a href="#equipo" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Equipo</a>
+            <a href="#contacto" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Contacto</a>
         </nav>
+        <a href="#contacto" class="hidden md:inline-flex bg-[#405b6a] hover:bg-[#314652] text-white px-6 py-4 transition-all text-xs tracking-[0.2em] font-bold uppercase rounded-full shadow-lg shadow-[#405b6a]/20">Agendar Turno</a>
 
         <!-- Mobile Menu Button -->
         <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-[#405b6a] hover:bg-gray-100 transition-colors rounded-lg">
@@ -60,12 +60,12 @@
         
         <!-- Menu Items -->
         <nav class="flex flex-col gap-6 px-6 py-8">
-            <a href="/" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Consultorio</a>
-            <a href="#" @click="mobileMenuOpen = false" class="text-gray-900 font-medium text-lg hover:text-[#405b6a] transition-colors">Inicio</a>
-            <a href="#servicios" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Servicios</a>
-            <a href="#equipo" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Equipo</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-[#405b6a] transition-colors">Contacto</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-[#405b6a] text-white px-6 py-3.5 rounded-full font-bold uppercase text-xs tracking-widest transition-colors hover:bg-[#314652] text-center mt-4">Agendar Turno</a>
+            <a href="/" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Consultorio</a>
+            <a href="#" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Inicio</a>
+            <a href="#servicios" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Servicios</a>
+            <a href="#equipo" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Equipo</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Contacto</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-[#405b6a] text-white px-10 py-5 rounded-full font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-[#314652] text-center mt-4 shadow-lg shadow-[#405b6a]/20">Agendar Turno</a>
         </nav>
     </div>
 
@@ -82,10 +82,10 @@
                         Dermatología integral con enfoque clínico y estético. Proporcionamos tratamientos personalizados de vanguardia en un ambiente de serenidad y profesionalismo.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-                        <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-xl shadow-[#405b6a]/20 hover:scale-105 active:scale-95">
+                        <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-[#405b6a]/20">
                             Agendar Turno
                         </a>
-                        <a href="#estetica" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-sm hover:shadow-md">
+                        <a href="#estetica" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-gray-200/50">
                             Conocer más
                         </a>
                     </div>
@@ -231,7 +231,7 @@
                     </div>
 
                     <div>
-                        <a href="#contacto" class="inline-flex items-center gap-3 bg-[#2c2c2c] hover:bg-black text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all rounded-full shadow-xl shadow-black/10 hover:gap-5">
+                        <a href="#contacto" class="inline-flex items-center gap-4 bg-[#2c2c2c] hover:bg-black text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 rounded-full shadow-lg shadow-black/20">
                             <span>Más sobre mí</span>
                             <x-heroicon-o-arrow-long-right class="w-5 h-5" />
                         </a>
@@ -264,7 +264,7 @@
                             <span class="h-[1px] w-8 bg-[#405b6a]"></span>
                             <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
                         </div>
-                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de San Miguel</h2>
+                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en San Miguel</h2>
                         
                         <div class="space-y-10">
                             <div class="flex items-start gap-6 group">
@@ -298,8 +298,8 @@
                             </div>
                         </div>
     
-                        <div class="mt-16">
-                            <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
+                        <div class="mt-16 mx-auto">
+                            <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20 rounded-full">
                                 Agendar Turno
                                 <x-heroicon-o-arrow-right class="w-4 h-4" />
                             </a>

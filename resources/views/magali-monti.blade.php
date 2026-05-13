@@ -33,14 +33,14 @@ use App\Models\Professional;
         </a>
         
         <!-- Desktop Nav -->
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-600">
-            <a href="/" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Consultorio</a>
-            <a href="#" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Inicio</a>
-            <a href="#servicios" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Servicios</a>
-            <a href="#sobre-mi" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Sobre Mí</a>
-            <a href="#contacto" class="border-b-2 border-transparent hover:border-primary hover:text-primary pb-1 transition-colors">Contacto</a>
-            <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white px-8 py-2.5 transition-all text-xs tracking-widest font-semibold uppercase rounded-full shadow-lg shadow-primary/10 hover:shadow-xl">Agendar Turno</a>
+        <nav class="hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.1em] text-primary">
+            <a href="/" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Consultorio</a>
+            <a href="#" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Inicio</a>
+            <a href="#servicios" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Servicios</a>
+            <a href="#sobre-mi" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Sobre Mí</a>
+            <a href="#contacto" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Contacto</a>
         </nav>
+        <a href="#contacto" class="hidden md:inline-flex bg-primary hover:bg-primary-hover text-white px-6 py-4 transition-all text-xs tracking-[0.2em] font-bold uppercase rounded-full shadow-lg shadow-primary/20">Agendar Turno</a>
 
         <!-- Mobile Menu Button -->
         <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
@@ -64,19 +64,19 @@ use App\Models\Professional;
         
         <!-- Menu Items -->
         <nav class="flex flex-col gap-6 px-6 py-8">
-            <a href="/" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Consultorio</a>
-            <a href="#" @click="mobileMenuOpen = false" class="text-gray-900 font-medium text-lg hover:text-primary transition-colors">Inicio</a>
-            <a href="#servicios" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Servicios</a>
-            <a href="#sobre-mi" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Sobre Mí</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="text-gray-700 font-medium text-lg hover:text-primary transition-colors">Contacto</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-primary text-white px-6 py-3.5 rounded-full font-bold uppercase text-xs tracking-widest transition-colors hover:bg-primary-hover text-center mt-4">Agendar Turno</a>
+            <a href="/" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Consultorio</a>
+            <a href="#" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Inicio</a>
+            <a href="#servicios" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Servicios</a>
+            <a href="#sobre-mi" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Sobre Mí</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="text-primary font-medium text-lg hover:text-primary-hover transition-colors">Contacto</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-primary text-white px-10 py-5 rounded-full font-bold uppercase text-xs tracking-[0.2em] transition-all hover:bg-primary-hover text-center mt-4 shadow-lg shadow-primary/20">Agendar Turno</a>
         </nav>
     </div>
 
     <main>
         <!-- Hero Section -->
         <div class="bg-[#f0f2f4]">
-            <section class="max-w-7xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-16 md:pb-28 grid md:grid-cols-2 gap-12 items-center">
+            <section class="max-w-7xl mx-auto px-4 md:px-8 pt-12 md:pt-20 pb-16 md:pb-28 grid md:grid-cols-2 gap-22 md:gap-12 items-center">
                 <div class="order-2 md:order-1 flex flex-col items-center text-center md:items-start md:text-left">
                     <span class="text-xs font-bold tracking-widest text-primary/60 uppercase mb-4 block">Psicoterapia para tu bienestar emocional</span>
                     <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] text-gray-900 mb-6">
@@ -86,10 +86,10 @@ use App\Models\Professional;
                         Acompañamiento terapéutico con mirada humana y profesional para fortalecer tus recursos emocionales y construir una vida con más equilibrio.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-                        <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-xl shadow-primary/20 hover:scale-105 active:scale-95">
+                        <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-primary/20">
                             Agendar Turno
                         </a>
-                        <a href="#servicios" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-4.5 text-xs font-bold font-sans uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-sm hover:shadow-md">
+                        <a href="#servicios" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-gray-200/50">
                             Conocer más
                         </a>
                     </div>
@@ -101,7 +101,7 @@ use App\Models\Professional;
                     </div>
 
                     <!-- Floating Badge -->
-                    <div class="absolute left-4 md:-left-10 md:top-auto -bottom-10 bg-white/75 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute left-4 md:-left-10 md:top-auto -bottom-12 bg-white/75 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
                         <div class="flex items-start gap-4">
                             <div class="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
                                 <x-heroicon-o-heart class="w-6 h-6" />
@@ -304,7 +304,7 @@ use App\Models\Professional;
                             <span class="h-[1px] w-8 bg-[#405b6a]"></span>
                             <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
                         </div>
-                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de San Miguel</h2>
+                        <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en San Miguel</h2>
                         
                         <div class="space-y-10">
                             <div class="flex items-start gap-6 group">
@@ -338,8 +338,8 @@ use App\Models\Professional;
                             </div>
                         </div>
 
-                        <div class="mt-16">
-                            <a href="https://wa.me/5492974014639" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
+                        <div class="mt-16 mx-auto">
+                            <a href="https://wa.me/5492974014639" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20 rounded-full">
                                 Agendar Turno
                                 <x-heroicon-o-arrow-right class="w-4 h-4" />
                             </a>

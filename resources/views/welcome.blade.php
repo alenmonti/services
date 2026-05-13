@@ -29,15 +29,15 @@
     <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between relative z-50">
         <a href="#" class="block w-40 md:w-52 shrink-0">
             <!-- Logo -->
-            <img src="{{ web_image('welcome.logo-transparent') }}" alt="Consultorio Monti" class="w-36 h-auto object-contain">
+            <img src="{{ web_image('welcome.logo-ico') }}" alt="Consultorio Monti" class="w-28 h-auto object-contain">
         </a>
-        <nav class="hidden md:flex gap-8 text-sm font-medium text-stone-500">
-            <a href="#" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Inicio</a>
-            <a href="#especialistas" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Profesionales</a>
-            <a href="#espacio" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Espacio</a>
-            <a href="#contacto" class="border-b-2 border-transparent hover:border-brand hover:text-brand pb-1 transition-colors">Contacto</a>
+        <nav class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.1em] text-brand">
+            <a href="#" class="border-b-2 border-transparent hover:border-brand-dark hover:text-brand-dark pb-1 transition-colors">Inicio</a>
+            <a href="#especialistas" class="border-b-2 border-transparent hover:border-brand-dark hover:text-brand-dark pb-1 transition-colors">Profesionales</a>
+            <a href="#espacio" class="border-b-2 border-transparent hover:border-brand-dark hover:text-brand-dark pb-1 transition-colors">Espacio</a>
+            <a href="#contacto" class="border-b-2 border-transparent hover:border-brand-dark hover:text-brand-dark pb-1 transition-colors">Contacto</a>
         </nav>
-        <a href="#contacto" class="hidden md:inline-flex bg-brand hover:bg-brand-dark text-white px-6 py-2.5 rounded-full text-sm font-medium transition-colors">
+        <a href="#contacto" class="hidden md:inline-flex bg-brand hover:bg-brand-dark text-white px-6 py-4 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all shadow-lg shadow-brand/20">
             Agendar Turno
         </a>
         
@@ -64,10 +64,10 @@
         <!-- Menu Items -->
         <nav class="flex flex-col gap-6 px-6 py-8">
             <a href="#" @click="mobileMenuOpen = false" class="text-brand font-semibold text-lg">Inicio</a>
-            <a href="#especialistas" @click="mobileMenuOpen = false" class="text-stone-700 font-medium text-lg hover:text-brand transition-colors">Profesionales</a>
-            <a href="#espacio" @click="mobileMenuOpen = false" class="text-stone-700 font-medium text-lg hover:text-brand transition-colors">Espacio</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="text-stone-700 font-medium text-lg hover:text-brand transition-colors">Contacto</a>
-            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-brand text-white px-6 py-3 rounded-full text-sm font-medium transition-colors hover:bg-brand-dark text-center mt-4">
+            <a href="#especialistas" @click="mobileMenuOpen = false" class="text-brand font-medium text-lg hover:text-brand-dark transition-colors">Profesionales</a>
+            <a href="#espacio" @click="mobileMenuOpen = false" class="text-brand font-medium text-lg hover:text-brand-dark transition-colors">Espacio</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="text-brand font-medium text-lg hover:text-brand-dark transition-colors">Contacto</a>
+            <a href="#contacto" @click="mobileMenuOpen = false" class="bg-brand text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all hover:bg-brand-dark text-center mt-4 shadow-lg shadow-brand/20">
                 Agendar Turno
             </a>
         </nav>
@@ -89,10 +89,10 @@
                     Ofrecemos atención profesional y personalizada en psicoterapia y dermatología, brindando un abordaje centrado en la salud física y emocional.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <a href="#especialistas" class="bg-brand hover:bg-brand-dark text-white px-8 py-3.5 rounded-full text-sm font-medium font-sans transition-colors text-center">
+                    <a href="#especialistas" class="bg-brand hover:bg-brand-dark text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-brand/20">
                         Conocer Especialidades
                     </a>
-                    <a href="#espacio" class="bg-transparent border border-stone-300 hover:border-stone-400 text-stone-700 px-8 py-3.5 rounded-full text-sm font-medium font-sans transition-colors text-center">
+                    <a href="#espacio" class="bg-transparent border border-stone-300 hover:border-stone-400 text-stone-700 px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-stone-200/50">
                         Ver Instalaciones
                     </a>
                 </div>
@@ -143,7 +143,7 @@
         <!-- Nuestro Espacio Section -->
         <section id="espacio" class="bg-[#F0F1ED] rounded-[3rem] flex flex-col md:flex-row overflow-hidden border border-stone-100 shadow-sm">
             <div class="p-10 md:p-16 lg:p-20 flex flex-col justify-center w-full md:w-1/2">
-                <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 text-brand">
+                <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-8 text-brand mx-auto">
                     <x-heroicon-o-home class="w-6 h-6" />
                 </div>
                 <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-6">Nuestro Espacio</h2>
@@ -187,12 +187,12 @@
             </div>
             <div class="grid md:grid-cols-2 gap-0 rounded-[3rem] overflow-hidden shadow-2xl shadow-[#405b6a]/10">
                 <!-- Info Contacto -->
-                <div class="bg-white p-6 md:p-20 flex flex-col justify-center">
+                <div class="bg-white p-6 md:p-20 flex flex-col justify-center pt-8">
                     <div class="flex items-center gap-3 mb-6">
                         <span class="h-[1px] w-8 bg-[#405b6a]"></span>
                         <span class="text-xs font-bold tracking-[0.2em] text-[#405b6a] uppercase">Ubicación</span>
                     </div>
-                    <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en <br>el corazón de San Miguel</h2>
+                    <h2 class="font-serif text-4xl text-gray-900 font-medium mb-12 leading-tight">Encuéntranos en San Miguel</h2>
 
                     <div class="space-y-10">
                         <div class="flex items-start gap-6 group">
@@ -226,8 +226,8 @@
                         </div>
                     </div>
 
-                    <div class="mt-16">
-                        <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20">
+                    <div class="mt-16 mx-auto">
+                        <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20 rounded-full">
                             Agendar Turno
                             <x-heroicon-o-arrow-right class="w-4 h-4" />
                         </a>
