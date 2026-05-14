@@ -23,7 +23,7 @@
     
     <!-- Navbar -->
     <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50">
-        <a href="#" class="block w-30 md:w-40 shrink-0">
+        <a href="#" class="block w-20 md:w-40 shrink-0">
             <!-- Logo -->
             <img src="{{ web_image('mailin.logo') }}" alt="Dra. Mailín Monti" class="w-full h-auto object-contain">
         </a>
@@ -53,7 +53,7 @@
     <div x-show="mobileMenuOpen" x-cloak @click.outside="mobileMenuOpen = false" class="fixed inset-0 bg-white z-[60] md:hidden flex flex-col">
         <!-- Close Button -->
         <div class="flex justify-between items-center px-4 md:px-8 py-6 border-b border-gray-200">
-            <img src="{{ web_image('mailin.logo') }}" alt="Dra. Mailín Monti" class="w-22 h-auto object-contain">
+            <img src="{{ web_image('mailin.logo') }}" alt="Dra. Mailín Monti" class="w-20 h-auto object-contain">
             <button @click="mobileMenuOpen = false" class="p-2 text-[#405b6a] hover:bg-gray-100 transition-colors rounded-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />

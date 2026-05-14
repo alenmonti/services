@@ -27,7 +27,7 @@ use App\Models\Professional;
     
     <!-- Navbar -->
     <header class="py-6 px-4 md:px-8 max-w-7xl mx-auto flex justify-between items-center relative z-50">
-        <a href="https://consultoriomonti.bewit.com.ar/" class="block w-40 md:w-56 shrink-0">
+        <a href="https://consultoriomonti.bewit.com.ar/" class="block w-26 md:w-56 shrink-0">
             <!-- Logo -->
             <img src="{{ web_image('magali.logo') }}" alt="Magalí Monti - Lic. Psicopedagogía" class="w-full h-auto object-contain">
         </a>
