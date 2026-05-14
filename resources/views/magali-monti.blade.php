@@ -288,6 +288,10 @@ use App\Models\Professional;
         <!-- Encuéntranos Section -->
         <section id="contacto" class="py-20 md:py-32 bg-[#e8ebe6] relative">
             <div class="max-w-7xl mx-auto px-4 md:px-8">
+                <div class="flex flex-col items-center mb-12">
+                    <h2 class="font-serif text-3xl md:text-4xl text-stone-900 mb-4">Contáctanos</h2>
+                    <div class="h-[2px] w-16 bg-[#E8A598]"></div>
+                </div>
                 <div class="mb-8 flex flex-wrap items-center justify-center md:justify-center gap-8 md:gap-12">
                     <a href="https://wa.me/5492974014639" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
                         <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
