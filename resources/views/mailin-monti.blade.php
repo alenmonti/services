@@ -36,7 +36,10 @@
             <a href="#equipo" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Equipo</a>
             <a href="#contacto" class="hover:text-primary-hover transition-colors border-b-2 border-transparent hover:border-primary-hover pb-1">Contacto</a>
         </nav>
-        <a href="#contacto" class="hidden md:inline-flex bg-[#405b6a] hover:bg-[#314652] text-white px-6 py-4 transition-all text-xs tracking-[0.2em] font-bold uppercase rounded-full shadow-lg shadow-[#405b6a]/20">Agendar Turno</a>
+        <a href="#contacto" class="hidden md:flex items-center bg-[#405b6a] hover:bg-[#314652] text-white px-6 py-4 transition-all text-xs tracking-[0.2em] font-bold uppercase rounded-full shadow-lg shadow-[#405b6a]/20">
+            <x-heroicon-o-calendar-days class="w-5 h-5 mr-2" />
+            Agendar Turno
+        </a>
 
         <!-- Mobile Menu Button -->
         <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-[#405b6a] hover:bg-gray-100 transition-colors rounded-lg">
@@ -85,7 +88,7 @@
                         <a href="#contacto" class="bg-[#405b6a] hover:bg-[#314652] text-white text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-[#405b6a]/20">
                             Agendar Turno
                         </a>
-                        <a href="#estetica" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-gray-200/50">
+                        <a href="#estetica" class="bg-transparent border border-stone-400 hover:border-stone-500 text-stone-700 px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-stone-200/50">
                             Conocer más
                         </a>
                     </div>
@@ -140,52 +143,44 @@
                     @endif
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     @forelse($group->services as $service)
-                    <div class="group bg-white rounded-3xl overflow-hidden flex flex-col h-full shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_20px_40px_rgba(64,91,106,0.08)] transition-all duration-500 hover:-translate-y-2 ">
+                    <div class="group bg-white rounded-2xl overflow-hidden flex flex-col h-full shadow-[0_10px_30px_rgba(0,0,0,0.08)] hover:shadow-[0_20px_40px_rgba(64,91,106,0.12)] transition-all duration-500 hover:-translate-y-2">
                         @if($service->image)
-                        <div class="w-full h-64 relative overflow-hidden">
+                        <div class="w-full h-56 relative overflow-hidden">
                             <img src="{{ asset('storage/' . $service->image) }}" alt="{{ $service->title }}" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                         </div>
                         @else
-                        <div class="w-full h-64 relative overflow-hidden bg-gray-50 flex items-center justify-center">
-                            <div class="relative">
-                                <div class="absolute inset-0 scale-150 blur-2xl bg-[#405b6a]/10 rounded-full"></div>
-                                <x-heroicon-o-heart class="w-16 h-16 text-[#405b6a]/20 relative z-10" />
-                            </div>
+                        <div class="w-full h-56 bg-gradient-to-br from-[#405b6a]/10 to-[#405b6a]/5 flex items-center justify-center">
+                            <x-heroicon-o-heart class="w-12 h-12 text-[#405b6a]/30" />
                         </div>
                         @endif
-                        <div class="p-8 flex flex-col flex-1 relative" x-data="{ expanded: false, hasMore: false }" x-init="$nextTick(() => { hasMore = $refs.desc.scrollHeight > $refs.desc.clientHeight })">
-                            <div class="flex justify-between items-start mb-4">
-                                <h3 class="text-2xl font-bold text-gray-900 group-hover:text-[#405b6a] transition-colors leading-tight">{{ $service->title }}</h3>
-                                <div class="bg-[#f8f9fa] p-2 rounded-lg group-hover:bg-[#405b6a]/5 transition-colors">
-                                    <x-heroicon-o-chevron-right class="w-4 h-4 text-[#405b6a]" />
-                                </div>
-                            </div>
-                            <p x-ref="desc" class="text-gray-500 text-sm leading-relaxed flex-1 transition-all duration-300" :class="expanded ? '' : 'line-clamp-3'">{{ $service->description }}</p>
+                        <div class="p-8 flex flex-col flex-1" x-data="{ expanded: false, hasMore: false }" x-init="$nextTick(() => { hasMore = $refs.desc.scrollHeight > $refs.desc.clientHeight })">
+                            <h3 class="text-xl font-serif font-semibold text-gray-900 group-hover:text-[#405b6a] transition-colors mb-3 leading-tight">{{ $service->title }}</h3>
+                            <p x-ref="desc" class="text-gray-600 text-xs leading-relaxed flex-1 transition-all duration-300" :class="expanded ? '' : 'line-clamp-3'">{{ $service->description }}</p>
                             
-                            <button x-show="hasMore" @click="expanded = !expanded" class="text-[10px] font-bold text-primary uppercase tracking-[0.1em] mt-2 mb-8 inline-flex items-center gap-1 hover:text-primary-hover transition-colors" x-cloak>
+                            <button x-show="hasMore" @click="expanded = !expanded" class="text-[10px] font-bold text-primary uppercase tracking-[0.1em] mt-2 mb-6 inline-flex items-center gap-1 hover:text-primary-hover transition-colors" x-cloak>
                                 <span x-text="expanded ? 'Ver menos' : 'Leer más'"></span>
                                 <x-heroicon-o-chevron-down class="w-3 h-3 transition-transform duration-300" x-bind:class="expanded ? 'rotate-180' : ''" />
                             </button>
                             
-                            <div class="flex items-center justify-between pt-4">
+                            <div class="flex items-center justify-between pt-2">
                                 @if($service->price)
                                 <div class="flex flex-col">
                                     <span class="text-[10px] uppercase tracking-widest text-gray-400 font-bold mb-1">Valor</span>
                                     <p class="text-lg font-bold text-[#405b6a]">${{ number_format($service->price, 0, ',', '.') }}</p>
                                 </div>
                                 @endif
-                                    <a href="#contacto" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-primary uppercase group/link">
-                                        <span>Consultar</span>
-                                        <x-heroicon-o-arrow-right class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
-                                    </a>
+                                <a href="#contacto" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-primary uppercase group/link">
+                                    <span>Consultar</span>
+                                    <x-heroicon-o-arrow-right class="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                                </a>
                             </div>
                         </div>
                     </div>
                     @empty
-                    <div class="col-span-full text-center py-20 bg-white/50 rounded-3xl border-2 border-dashed border-gray-100">
+                    <div class="col-span-full text-center py-20 bg-white/50 rounded-2xl border-2 border-dashed border-gray-100">
                         <x-heroicon-o-face-frown class="w-12 h-12 text-gray-300 mx-auto mb-4" />
                         <p class="text-gray-400 font-medium">No hay servicios disponibles en esta categoría.</p>
                     </div>

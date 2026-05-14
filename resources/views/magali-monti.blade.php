@@ -40,7 +40,10 @@ use App\Models\Professional;
             <a href="#sobre-mi" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Sobre Mí</a>
             <a href="#contacto" class="border-b-2 border-transparent hover:border-primary-hover hover:text-primary-hover pb-1 transition-colors">Contacto</a>
         </nav>
-        <a href="#contacto" class="hidden md:inline-flex bg-primary hover:bg-primary-hover text-white px-6 py-4 transition-all text-xs tracking-[0.2em] font-bold uppercase rounded-full shadow-lg shadow-primary/20">Agendar Turno</a>
+        <a href="#contacto" class="hidden md:flex items-center bg-[#405b6a] hover:bg-[#314652] text-white px-6 py-4 transition-all text-xs tracking-[0.2em] font-bold uppercase rounded-full shadow-lg shadow-[#405b6a]/20">
+            <x-heroicon-o-calendar-days class="w-5 h-5 mr-2" />
+            Agendar Turno
+        </a>
 
         <!-- Mobile Menu Button -->
         <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2.5 text-gray-700 hover:bg-gray-100 transition-colors rounded-lg">
@@ -89,7 +92,7 @@ use App\Models\Professional;
                         <a href="#contacto" class="bg-primary hover:bg-primary-hover text-white text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-primary/20">
                             Agendar Turno
                         </a>
-                        <a href="#servicios" class="bg-white border border-gray-200 text-gray-700 hover:bg-gray-50 text-center px-10 py-5 text-xs font-bold uppercase tracking-[0.2em] transition-all w-full sm:w-auto rounded-full shadow-lg shadow-gray-200/50">
+                        <a href="#servicios" class="bg-transparent border border-stone-400 hover:border-stone-500 text-stone-700 px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-stone-200/50">
                             Conocer más
                         </a>
                     </div>
@@ -101,7 +104,7 @@ use App\Models\Professional;
                     </div>
 
                     <!-- Floating Badge -->
-                    <div class="absolute left-4 md:-left-10 md:top-auto -bottom-12 bg-white/75 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="absolute left-4 md:-left-10 md:top-auto -bottom-12 bg-white/50 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[260px] transform hover:-translate-y-1 transition-transform duration-300">
                         <div class="flex items-start gap-4">
                             <div class="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
                                 <x-heroicon-o-heart class="w-6 h-6" />

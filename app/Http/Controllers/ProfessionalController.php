@@ -33,7 +33,7 @@ class ProfessionalController extends Controller
 
         $groups = $professional->serviceGroups()->with(['services' => function ($query) {
             $query->where('visible', true);
-        }])->get();
+        }])->orderBy('title', 'desc')->get();
 
         return view('mailin-monti', compact('professional', 'groups'));
     }

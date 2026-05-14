@@ -29,7 +29,7 @@
     <header class="w-full max-w-6xl mx-auto px-6 py-6 flex items-center justify-between relative z-50">
         <a href="#" class="block w-40 md:w-52 shrink-0">
             <!-- Logo -->
-            <img src="{{ web_image('welcome.logo-ico') }}" alt="Consultorio Monti" class="w-28 h-auto object-contain">
+            <img src="{{ web_image('welcome.logo-ico') }}" alt="Consultorio Monti" class="w-20 md:w-28 h-auto object-contain">
         </a>
         <nav class="hidden md:flex gap-8 text-[11px] font-bold uppercase tracking-[0.1em] text-brand">
             <a href="#" class="border-b-2 border-transparent hover:border-brand-dark hover:text-brand-dark pb-1 transition-colors">Inicio</a>
@@ -82,9 +82,12 @@
                     <x-heroicon-o-check-badge class="w-4 h-4" />
                     <span>Profesionales de la salud</span>
                 </div>
-                <h1 class="font-serif text-4xl md:text-6xl text-stone-900 leading-[1.1] mb-6">
-                    Consultorio Monti - Un espacio dedicado a tu bienestar integral.
+                <h1 class="font-serif text-4xl md:text-6xl text-stone-900 leading-[1.1] mb-1">
+                    Consultorio Monti
                 </h1>
+                <h4 class="font-serif text-4xl md:text-6xl text-brand leading-[1.1] mb-6">
+                    Un espacio dedicado a tu bienestar integral.
+                </h4>
                 <p class="text-stone-500 font-light leading-relaxed mb-10 max-w-lg">
                     Ofrecemos atención profesional y personalizada en psicoterapia y dermatología, brindando un abordaje centrado en la salud física y emocional.
                 </p>
@@ -97,8 +100,23 @@
                     </a>
                 </div>
             </div>
-            <div class="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <img src="{{ web_image('welcome.hero') }}" alt="Recepción Consultorio" class="absolute inset-0 w-full h-full object-cover">
+            <div class="relative w-full">
+                <div class="relative w-full h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl">
+                    <img src="{{ web_image('welcome.hero') }}" alt="Recepción Consultorio" class="absolute inset-0 w-full h-full object-cover">
+                </div>
+
+                <!-- Floating Badge (Cartelito) -->
+                <div class="absolute left-4 md:-left-14 top-4 md:top-auto md:-bottom-10 bg-white/50 backdrop-blur-md text-xs p-3 md:p-5 rounded-2xl shadow-xl max-w-[300px] transform hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-start gap-4">
+                            <div class="p-3 bg-primary/10 text-primary rounded-xl shrink-0">
+                                <x-heroicon-o-heart class="w-6 h-6" />
+                            </div>
+                        <div>
+                            <p class="text-sm font-bold text-stone-900 tracking-tight">Salud & Ciencia</p>
+                            <p class="text-xs text-stone-500 mt-1 leading-relaxed">Atención integral centrada en tu bienestar físico y emocional.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
