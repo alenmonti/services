@@ -89,7 +89,7 @@
                     Un espacio dedicado a tu bienestar integral.
                 </h4>
                 <p class="text-stone-500 font-light leading-relaxed mb-10 max-w-lg">
-                    Ofrecemos atención profesional y personalizada en psicoterapia y dermatología, brindando un abordaje centrado en la salud física y emocional.
+                    Ofrecemos atención profesional y personalizada en psicopedagogía y dermatología, brindando un abordaje centrado en la salud física y emocional.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <a href="#especialistas" class="bg-brand hover:bg-brand-dark text-white px-10 py-5 rounded-full text-xs font-bold uppercase tracking-[0.2em] transition-all text-center shadow-lg shadow-brand/20">
@@ -131,7 +131,7 @@
                         <img src="{{ web_image('welcome.maga_profile') }}" alt="Magalí Monti" class="w-24 h-24 sm:w-36 sm:h-36 rounded-2xl object-cover shrink-0 shadow-sm border border-stone-100 mx-auto">
                     <div class="flex flex-col h-full">
                         <h3 class="font-serif text-2xl text-brand mb-1 group-hover:text-brand-dark transition-colors">Magalí Monti</h3>
-                        <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-3">Psicoterapeuta</p>
+                        <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-3">Psicopedagoga</p>
                         <p class="text-xs sm:text-sm text-stone-500 font-light leading-relaxed mb-6 flex-grow">
                             Especializada en acompañar procesos terapéuticos desde la empatía y la escucha activa. Un espacio seguro para trabajar en tu salud mental y desarrollo personal.
                         </p>
@@ -197,7 +197,7 @@
                 <div class="h-[2px] w-16 bg-[#E8A598]"></div>
             </div>
             <div class="mb-8 flex flex-wrap items-center justify-center gap-8 md:gap-12">
-                <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 animate-bounce" title="WhatsApp">
+                <a href="https://wa.me/5491164796043" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110 animate-bounce" title="WhatsApp">
                     <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-12 h-12 md:w-16 md:h-16 object-contain" />
                 </a>
                 <a href="mailto:consultoriomonti@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
@@ -223,33 +223,35 @@
                             </div>
                             <div>
                                 <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Dirección</h4>
-                                <p class="text-gray-500 text-base leading-relaxed">Conesa 849, 4f<br>Muñiz, Buenos Aires</p>
+                                <p class="text-gray-500 text-base leading-relaxed">Conesa 849, Depto. "4F"<br>Muñiz, Buenos Aires</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-6 group">
                             <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
-                                <x-heroicon-o-envelope class="w-6 h-6" />
+                                <x-heroicon-o-user class="w-6 h-6" />
                             </div>
                             <div>
-                                <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
-                                <a href="mailto:consultoriomonti@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">consultoriomonti@gmail.com</a>
+                                <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest">Mailín Monti </h4>
+                                <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-2">Dermatóloga</p>
+                                <a href="https://wa.me/541130968455" target="_blank" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 3096 8455</a>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-6 group">
                             <div class="bg-[#f8f9fa] p-4 rounded-2xl group-hover:bg-[#405b6a] group-hover:text-white transition-all duration-300">
-                                <x-heroicon-o-phone class="w-6 h-6" />
+                                <x-heroicon-o-user class="w-6 h-6" />
                             </div>
                             <div>
-                                <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
-                                <a href="tel:+541130968455" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 5874 2412</a>
+                                <h4 class="text-sm font-bold text-gray-900 uppercase tracking-widest">Magalí Monti</h4>
+                                <p class="text-[10px] tracking-widest uppercase text-[#A55F51] font-semibold mb-2">Psicopedagoga</p>
+                                <a href="https://wa.me/5492974014639" target="_blank" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 9 2974 01-4639</a>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-16 mx-auto">
-                        <a href="https://wa.me/541130968455" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20 rounded-full">
+                        <a href="https://wa.me/5491164796043" target="_blank" class="inline-flex items-center gap-4 bg-[#405b6a] hover:bg-[#314652] text-white text-xs font-bold uppercase tracking-[0.2em] px-10 py-5 transition-all hover:gap-6 shadow-lg shadow-[#405b6a]/20 rounded-full">
                             Agendar Turno
                             <x-heroicon-o-arrow-right class="w-4 h-4" />
                         </a>
@@ -278,7 +280,7 @@
                         Cuidamos tu salud integral con profesionalismo y calidez humana. Psicología y Dermatología en un solo lugar.
                     </p>
                     <div class="flex items-center gap-4">
-                        <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
+                        <a href="https://wa.me/5491164796043" target="_blank" rel="noopener" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="WhatsApp">
                             <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
                         </a>
                         <a href="mailto:consultoriomonti@gmail.com" class="inline-flex items-center justify-center transition-transform duration-300 hover:-translate-y-1 hover:scale-110" title="Email">
@@ -317,7 +319,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300" title="WhatsApp">
+    <a href="https://wa.me/5491164796043" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300" title="WhatsApp">
         <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
     </a>
 

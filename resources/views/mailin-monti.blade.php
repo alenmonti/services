@@ -277,7 +277,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Dirección</h4>
-                                    <p class="text-gray-500 text-base leading-relaxed">Conesa 849, 4f<br>Muñiz, Buenos Aires</p>
+                                    <p class="text-gray-500 text-base leading-relaxed">Conesa 849, Depto. "4F"<br>Muñiz, Buenos Aires</p>
                                 </div>
                             </div>
     
@@ -287,7 +287,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
-                                    <a href="mailto:consultoriodramonti@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">dramailinmonti@gmail.com</a>
+                                    <span class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">consultoriodramonti@gmail.com</span>
                                 </div>
                             </div>
     
@@ -297,7 +297,7 @@
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
-                                    <a href="tel:+541130968455" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 5874 2412</a>
+                                    <span class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 11 3096 8455</span>
                                 </div>
                             </div>
                         </div>
@@ -376,7 +376,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/541157842412" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300" title="WhatsApp">
+    <a href="https://wa.me/541130968455" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 inline-flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg shadow-black/20 hover:shadow-xl hover:scale-110 transition-all duration-300" title="WhatsApp">
         <img src="{{ web_image('social.wsp') }}" alt="" aria-hidden="true" class="w-7 h-7 object-contain" />
     </a>
 

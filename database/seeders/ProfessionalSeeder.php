@@ -16,7 +16,7 @@ class ProfessionalSeeder extends Seeder
             'slug' => 'magali-monti',
         ], [
             'name' => 'Magali Monti',
-            'bio' => 'Psicoterapeuta. Atención individual y grupal. Especial interés en terapia cognitivo-conductual y enfoques integrativos.',
+            'bio' => 'Psicopedagoga. Atención individual y grupal. Especial interés en terapia cognitivo-conductual y enfoques integrativos.',
             'contact' => 'contacto@magali.example',
         ]);
 

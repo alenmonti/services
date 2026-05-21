@@ -8,7 +8,7 @@ use App\Models\Professional;
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Lic. Magali Monti - Psicoterapeuta</title>
+    <title>Lic. Magali Monti - Psicopedagoga</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="icon" href="{{ web_image('welcome.logo-ico') }}" type="image/x-icon">
@@ -325,7 +325,7 @@ use App\Models\Professional;
                                 </div>
                                 <div>
                                     <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Dirección</h4>
-                                    <p class="text-gray-500 text-base leading-relaxed">Conesa 849, 4f<br>Muñiz, Buenos Aires</p>
+                                    <p class="text-gray-500 text-base leading-relaxed">Conesa 849, Depto. "4F"<br>Muñiz, Buenos Aires</p>
                                 </div>
                             </div>
 
@@ -335,7 +335,7 @@ use App\Models\Professional;
                                     </div>
                                     <div>
                                         <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Email</h4>
-                                        <a href="mailto:magalimonti91@gmail.com" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">magalimonti91@gmail.com</a>
+                                        <span class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">magalimonti91@gmail.com</span>
                                     </div>
                             </div>
 
@@ -345,7 +345,7 @@ use App\Models\Professional;
                                     </div>
                                     <div>
                                         <h4 class="text-sm font-bold text-gray-900 mb-2 uppercase tracking-widest">Teléfono</h4>
-                                        <a href="tel:+5492974014639" class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 9 2974 01-4639</a>
+                                        <span class="text-gray-500 text-base hover:text-[#405b6a] transition-colors leading-relaxed">+54 9 2974 01-4639</span>
                                     </div>
                             </div>
                         </div>
